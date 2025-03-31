@@ -16,38 +16,42 @@
         default_layer {
 
             bindings = <
-    &kp N7 &kp N8 &kp N9 &trans &trans
-    &kp N4 &kp N5 &kp N6 &trans &trans
-    &kp N1 &kp N2 &kp N3 &trans &mkp RCLK 
-    &kp N0 &trans &kp RETURN &trans &trans 
+    &kp N7 &kp N8 &kp N9 &trans
+    &kp N4 &kp N5 &kp N6 &mkp MCLK
+    &kp N1 &kp N2 &kp N3 &mkp LCLK 
+    &kp N0 &trans &kp RETURN &trans
+    &trans &trans &trans &mkp RCLK 
             >;
 
         };
 
         joystick_layer {
             bindings = <
-    &kp N7 &kp N8 &kp N9 &trans &trans
-    &kp N4 &kp N5 &kp N6 &trans &tog 0 &mkp MCLK
-    &kp N1 &kp N2 &kp N3 &trans &mkp RCLK 
-    &kp N0 &trans &kp RETURN &trans &trans 
+    &kp N7 &kp N8 &kp N9 &trans
+    &kp N4 &kp N5 &kp N6 &mkp MCLK
+    &kp N1 &kp N2 &kp N3 &mkp LCLK 
+    &kp N0 &trans &kp RETURN &trans
+    &trans &trans &trans &mkp RCLK 
             >;
         };
 
         num_layer {
             bindings = <
-    &kp N7 &kp N8 &kp N9 &trans &trans
-    &kp N4 &kp N5 &kp N6 &trans &trans
-    &kp N1 &kp N2 &kp N3 &trans &mkp RCLK 
-    &kp N0 &trans &kp RETURN &trans &trans 
+    &kp N7 &kp N8 &kp N9 &trans
+    &kp N4 &kp N5 &kp N6 &mkp MCLK
+    &kp N1 &kp N2 &kp N3 &mkp LCLK 
+    &kp N0 &trans &kp RETURN &trans
+    &trans &trans &trans &mkp RCLK 
             >;
         };
 
         lower_layer {
             bindings = <
-    &bt BT_CLR &none &kp N8 &kp N9 &sys_reset &bootloader
-    &kp N4 &kp N5 &kp N6 &trans &trans
-    &kp N1 &kp N2 &kp N3 &trans &mkp RCLK 
-    &kp N0 &trans &kp RETURN &trans &trans 
+    &kp N7 &kp N8 &kp N9 &trans
+    &kp N4 &kp N5 &kp N6 &mkp MCLK
+    &kp N1 &kp N2 &kp N3 &mkp LCLK 
+    &kp N0 &trans &kp RETURN &trans
+    &trans &trans &trans &mkp RCLK
             >;
         };
     };
