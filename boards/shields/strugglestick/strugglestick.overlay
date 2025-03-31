@@ -86,15 +86,18 @@
 		triggers-per-rotation = <30>;
 	};
 
+	/* 
 	joystick_listener {
 		compatible = "zmk,input-listener";
 		device = <&anin0>;
 	};
+	*/
 };
-
+/* 
 &adc {
 	status = "okay";
 };
+*/
 
 &gpio0 {
     status = "okay";
@@ -104,6 +107,7 @@
     status = "okay";
 };
 
+/*
 / {
 	anin0: analog_input_0 {
 		compatible = "zmk,analog-input";
@@ -129,12 +133,9 @@
 			invert;
 			evt-type = <INPUT_EV_REL>;
 			input-code = <INPUT_REL_Y>;
-
-			/* enable report mdoe for gamepad axix or knob */
-			/* to only call input_report on quantquantized value is updated */
 			report-on-change-only;
 
 		};
 	};
 };
-
+*/
