@@ -13,12 +13,11 @@
 
 / {
     chosen {
-        zmk,kscan = &kscan0, &kscan1;
+        zmk,kscan = &kscan0;
     };
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        wakeup-source;
 
         diode-direction = "col2row";
 
@@ -41,7 +40,7 @@
     kscan1: kscan {
 		compatible = "zmk,kscan-gpio-direct";
 		wakeup-source;
-		input-gpios = <&gpio1 11 GPIO_ACTIVE_LOW>,  // 摇杆按键
+		input-gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>,  // 摇杆按键
 	};
 };
 
@@ -65,7 +64,7 @@ sensors {
 	status = "okay";
 };
 
-/ {
+{
 	anin0: analog_input_0 {
 		compatible = "zmk,analog-input";
 		sampling-hz = <100>;
@@ -99,7 +98,7 @@ sensors {
 	};
 };
 
-/ {
+{
     joystick_listener {
         compatible = "zmk,input-listener";
         device = <&anin0>;
