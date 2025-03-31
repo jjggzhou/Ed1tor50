@@ -114,7 +114,7 @@
 		sampling-hz = <100>;
 		x-ch {
 			io-channels = <&adc 0>;
-			mv-mid = <500>;
+			mv-mid = <100>;
 			mv-min-max = <10>;
 			mv-deadzone = <50>;
 			scale-multiplier = <1>;
