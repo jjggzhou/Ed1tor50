@@ -37,9 +37,6 @@
             ;
     };
 
-};
-
-/ {
     kscan1: kscan {
 		compatible = "zmk,kscan-gpio-direct";
 		wakeup-source;
