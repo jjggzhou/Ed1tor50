@@ -7,7 +7,7 @@ config ZMK_KEYBOARD_NAME
     default "StruggleStick"
 
 config ZMK_POINTING
-    default n
+    default y
 
 config ADC
     default y
