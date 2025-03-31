@@ -7,22 +7,22 @@ config ZMK_KEYBOARD_NAME
     default "StruggleStick"
 
 config ZMK_POINTING
-     default y
+    default y
 
 config ADC
-     default y
+    default y
 
 config ADC_ASYNC
-     default y
+    default y
 
 config ANALOG_INPUT
-     default y
+    default y
 
 config ANALOG_INPUT_LOG_DBG_RAW
-     default y
+    default y
 
 config ANALOG_INPUT_LOG_DBG_REPORT
-     default y
+    default y
 
 # config CONFIG_ADC
 #     default y
