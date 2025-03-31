@@ -116,7 +116,7 @@
 			io-channels = <&adc 0>;
 			mv-mid = <860>;
 			mv-min-max = <1024>;
-			mv-deadzone = <128>;
+			mv-deadzone = <60>;
 			scale-multiplier = <1>;
 			scale-divisor = <1>;
 			invert;
