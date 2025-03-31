@@ -16,7 +16,7 @@
         zmk,kscan = &kscan0;
     };
 
-    kscan0: kscan {
+    kscan0: kscan_matrix {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;	
         diode-direction = "col2row";
@@ -37,7 +37,7 @@
             ;
     };
 
-    kscan1: kscan {
+    kscan1: kscan_joystick_button {
 		compatible = "zmk,kscan-gpio-direct";
 		wakeup-source;
 		toggle-mode;
