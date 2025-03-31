@@ -25,7 +25,7 @@
 
         joystick_layer {
             bindings = <
-                &tog 0 &mkp MCLK  // 使用&tog 0实现自动切换回default_layer
+                &tog 0, &mkp MCLK  // 使用&tog 0实现自动切换回default_layer
             >;
         };
 
