@@ -37,6 +37,9 @@
             ;
     };
 
+};
+
+/ {
     kscan1: kscan {
 		compatible = "zmk,kscan-gpio-direct";
 		wakeup-source;
@@ -44,27 +47,30 @@
 	};
 };
 
-left_encoder: encoder_left {
-	compatible = "alps,ec11";
-	label = "encoder";
-	a-gpios = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-	b-gpios = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-	steps = <15>;
-	status = "okay";
+/ {
+	left_encoder: encoder_left {
+		compatible = "alps,ec11";
+		label = "encoder";
+		a-gpios = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		b-gpios = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		steps = <15>;
+		status = "okay";
+	};
 };
 
-
-sensors {
-	compatible = "zmk,keymap-sensors";
-	sensors = <&left_encoder>;
-	triggers-per-rotation = <30>
+/ {
+	sensors {
+		compatible = "zmk,keymap-sensors";
+		sensors = <&left_encoder>;
+		triggers-per-rotation = <30>
+	};
 };
 
 &adc {
 	status = "okay";
 };
 
-{
+/ {
 	anin0: analog_input_0 {
 		compatible = "zmk,analog-input";
 		sampling-hz = <100>;
@@ -98,9 +104,10 @@ sensors {
 	};
 };
 
-{
-    joystick_listener {
-        compatible = "zmk,input-listener";
-        device = <&anin0>;
-    };
+/ {
+	joystick_listener {
+		compatible = "zmk,input-listener";
+		device = <&anin0>;
+		};
+	};
 };
