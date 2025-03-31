@@ -22,7 +22,7 @@
     &kp N0 &trans &kp RETURN &trans
     &trans &trans &trans &mkp RCLK 
             >;
-
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         joystick_layer {
