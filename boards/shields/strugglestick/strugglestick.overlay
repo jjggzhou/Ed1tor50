@@ -14,12 +14,14 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
+		zmk,matrix-transform = &default_transform;
     };
 
     kscan0: kscan_matrix {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;	
         diode-direction = "col2row";
+
 
          col-gpios
             = <&gpio0 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -35,6 +37,30 @@
             , <&gpio0 31 GPIO_ACTIVE_HIGH>
             , <&gpio1 13 GPIO_ACTIVE_HIGH>
             ;
+    };
+
+	    default_transform: matrix_transform {
+        compatible = "zmk,matrix-transform";
+        rows = <5>;
+        columns = <4>;
+        // ┌───┬───┬───┬───┐
+        // │ 7 │ 8 │ 9 │   │
+        // ├───┼───┼───┼───┤
+        // │ 4 │ 5 │ 6 │MCLK│
+        // ├───┼───┼───┤   │
+        // │ 1 │ 2 │ 3 │LCLK│
+        // ├───┼───┼───┼───┤
+        // │ 0 │   │enter│ │
+        // ├───┴───┼───┤   │
+        // │       │   │ RCLK │
+        // └───────┴───┴───┘
+        map = <
+            RC(0,0) RC(0,1) RC(0,2)  
+            RC(1,0) RC(1,1) RC(1,2) RC(1,3)
+            RC(2,0) RC(2,1) RC(2,2) RC(2,3)
+            RC(3,0)         RC(3,2)
+                                    RC(4,1)
+        >;
     };
 
     kscan1: kscan_joystick_button {
