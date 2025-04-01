@@ -1,7 +1,6 @@
 / {
     custom_conflicts_fix {
         compatible = "zmk,gpio-direct";
-        // 强制关闭 GPIO0_5 和 GPIO0_31 的模拟功能
         gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>, <&gpio0 10 GPIO_ACTIVE_HIGH>;
     };
 };
