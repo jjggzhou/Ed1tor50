@@ -1,7 +1,10 @@
 include:
   - board: seeeduino_xiao_ble
     shield: strugglestick
-
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
+    format: reset
+    artifact-name: seeeduino_xiao_ble
 
 # name: Build ZMK firmware
 # on: [push, pull_request, workflow_dispatch]
