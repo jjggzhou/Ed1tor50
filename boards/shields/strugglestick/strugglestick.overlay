@@ -67,7 +67,7 @@
 		compatible = "zmk,kscan-gpio-direct";
 		wakeup-source;
 		toggle-mode;
-		input-gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>
+		input-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>
 		;
 	};
 
@@ -116,7 +116,7 @@
 			io-channels = <&adc 0>;
 			mv-mid = <1600>;
 			mv-min-max = <900>;
-			mv-deadzone = <60>;
+			mv-deadzone = <200>;
 			scale-multiplier = <1>;
 			scale-divisor = <1>;
 			invert;
@@ -125,9 +125,9 @@
 		};
 		y-ch {
 			io-channels = <&adc 1>;
-			mv-mid = <660>;
-			mv-min-max = <1024>;
-			mv-deadzone = <128>;
+			mv-mid = <1600>;
+			mv-min-max = <900>;
+			mv-deadzone = <200>;
 			scale-multiplier = <1>;
 			scale-divisor = <1>;
 			invert;
