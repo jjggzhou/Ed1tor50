@@ -112,7 +112,7 @@
 	anin0: analog_input_0 {
 		compatible = "zmk,analog-input";
 		sampling-hz = <100>;
-		x-ch {
+		y-ch {
 			io-channels = <&adc 0>;
 			mv-mid = <1760>;
 			mv-min-max = <600>;
@@ -122,7 +122,7 @@
 			evt-type = <INPUT_EV_REL>;
 			input-code = <INPUT_REL_X>;
 		};
-		y-ch {
+		x-ch {
 			io-channels = <&adc 1>;
 			mv-mid = <1660>;
 			mv-min-max = <600>;
