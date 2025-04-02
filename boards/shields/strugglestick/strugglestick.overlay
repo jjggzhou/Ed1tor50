@@ -22,7 +22,6 @@
         wakeup-source;	
         diode-direction = "col2row";
 
-
          col-gpios
             = <&gpio0 19 GPIO_ACTIVE_HIGH>
             , <&gpio1 14 GPIO_ACTIVE_HIGH>
@@ -96,26 +95,7 @@
 
 &adc {
     status = "okay";
-    #address-cells = <1>;
-    #size-cells = <0>;
-
-    channel@0 {  
-        reg = <0>;
-        zephyr,gain = "ADC_GAIN_1_4";
-        zephyr,reference = "ADC_REF_INTERNAL";
-        zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
-        zephyr,input-positive = <NRF_SAADC_AIN0>;
-    };
-
-    channel@1 {  
-        reg = <1>;
-        zephyr,gain = "ADC_GAIN_1_4";
-        zephyr,reference = "ADC_REF_INTERNAL";
-        zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
-        zephyr,input-positive = <NRF_SAADC_AIN1>;
-    };
 };
-
 
 &gpio0 {
     status = "okay";
@@ -123,10 +103,6 @@
 
 &gpio1 {
     status = "okay";
-};
-
-&uart1 {
-    status = "disabled";
 };
 
 / {
