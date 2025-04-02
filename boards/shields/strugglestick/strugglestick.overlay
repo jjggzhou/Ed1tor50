@@ -92,6 +92,12 @@
 		compatible = "zmk,input-listener";
 		device = <&anin0>;
 	};
+
+	EXT_POWER {
+	compatible = "zmk,ext-power-generic";
+	control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+	init-delay-ms = <50>;
+    };
 	
 };
 
@@ -151,12 +157,6 @@
 		compatible = "zmk,analog-input";
 		sampling-hz = <100>;
 
-		ext_power: ext_power {
-        compatible = "zmk,ext-power-generic";
-        status = "okay";
-        zmk,ext-power-voltage = <3300>; /* 3.3V */
-    	};
-		
 		y-ch {
 			io-channels = <&adc 0>;
 			mv-mid = <1760>;
