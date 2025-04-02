@@ -75,14 +75,14 @@
 		label = "encoder";
 		a-gpios = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		b-gpios = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-		steps = <15>;
+		steps = <30>;
 		status = "okay";
 	};
 
 	sensors: encoder_sensors {
 		compatible = "zmk,keymap-sensors";
 		sensors = <&left_encoder>;
-		triggers-per-rotation = <30>;
+		triggers-per-rotation = <15>;
 	};
 
 	
