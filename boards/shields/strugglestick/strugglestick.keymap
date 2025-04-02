@@ -19,7 +19,7 @@
     &kp N4 &kp N5 &kp N6 &trans
     &kp N1 &kp N2 &kp N3 &trans 
     &kp N0        &kp RETURN
-                         &kp N1
+                         &mkp RCLK
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
