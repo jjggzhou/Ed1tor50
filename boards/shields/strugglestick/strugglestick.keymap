@@ -10,6 +10,20 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
+     macros {
+        lm: lm {
+                compatible = "zmk,behavior-macro-two-param";
+                wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_press &mo 1>
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100)>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo 1>
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(300,100,50)>;
+            };
+       };
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -19,19 +33,9 @@
     &kp N4 &kp N5 &kp N6 &trans
     &kp N1 &kp N2 &kp N3 &trans 
     &kp N0        &kp RETURN
-                         &mkp RCLK
+           &mo 1         &mkp RCLK
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        joystick_layer {
-            bindings = <
-    &kp N7 &kp N8 &kp N9
-    &kp N4 &kp N5 &kp N6 &trans
-    &kp N1 &kp N2 &kp N3 &trans 
-    &kp N0        &kp RETURN
-                         &trans 
-            >;
         };
 
         num_layer {
