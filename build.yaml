@@ -1,6 +1,6 @@
 include:
   - board: seeeduino_xiao_ble
-    shield: strugglestick
+    shield: strugglestick rgbled_adapter
     snippet: zmk-usb-logging
 
 # name: Build ZMK firmware
