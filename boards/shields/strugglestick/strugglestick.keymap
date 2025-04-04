@@ -29,7 +29,6 @@
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-
             bindings = <
     &kp N7 &kp N8 &kp N9
     &kp N4 &kp N5 &kp N6 &trans
@@ -48,6 +47,7 @@
     &kp N0        &kp RETURN
                          &trans 
             >;
+            underglow = <60 3 100>;
         };
 
         lower_layer {
