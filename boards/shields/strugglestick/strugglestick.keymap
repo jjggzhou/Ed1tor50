@@ -13,7 +13,7 @@
 / {
     macros {
         lm: lm {
-                compatible = "zmk,behavior-macro-two-param";
+                compatible = "zmk,behavior-macro";
                 wait-ms = <0>;
                 tap-ms = <0>;
                 #binding-cells = <2>;
