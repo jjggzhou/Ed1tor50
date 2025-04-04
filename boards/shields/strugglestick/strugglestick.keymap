@@ -16,7 +16,6 @@
                 compatible = "zmk,behavior-macro";
                 wait-ms = <0>;
                 tap-ms = <0>;
-                #binding-cells = <2>;
                 bindings
                     = <&macro_press &mo 1>
                     , <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100)>
