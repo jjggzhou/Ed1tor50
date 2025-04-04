@@ -36,6 +36,7 @@
     &kp N0 &mo 1  &kp RETURN
                          &mkp RCLK
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         num_layer {
@@ -45,8 +46,7 @@
     &kp N1 &kp N2 &kp N3 &trans 
     &kp N0        &kp RETURN
                          &trans 
-            >;
-            underglow = <60 3 100>;
+            >; 
         };
 
         lower_layer {
