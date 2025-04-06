@@ -62,5 +62,15 @@
             { "row": 7, "col": 5, "x":  7.751, "y": 4.215, "r": -22.62, "rx":  8.251, "ry": 4.715 }
           ]
         }
-      }
+      },
+
+      "sensors": [
+    {
+      "ref": "left_encoder",
+      "name": "encoder_left",
+      "identifier": "encoder_left",
+      "compatible": "alps,ec11",
+      "label": "LEFT_ENCODER"
+    }
+  ]
   }
