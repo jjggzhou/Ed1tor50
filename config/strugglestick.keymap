@@ -33,7 +33,7 @@
                         &kp TAB  &kp Q    &kp W    &kp E    &kp R    &kp T                                              &kp Y &kp U     &kp I      &kp O   &kp P     &kp MINUS
                         &kp LCTL &kp A    &kp S    &kp D    &kp F    &kp G                                              &kp H &kp J     &kp K      &kp L   &kp SCLN  &kp SQT
                         &kp LSFT &kp Z    &kp X    &kp C    &kp V    &kp B      &mkp LCLK                 &mkp RCLK     &kp N &kp M     &kp COMMA  &kp DOT &kp SLASH &kp RSHFT
-                                 &kp LALT &kp LGUI &MO 1    &kp DEL  &kp SPACE                  &MO 4                   &MO 3 &kp ENTER &kp BSPC   &MO 2   &kp PSCRN
+                                 &kp LALT &kp LGUI &mo 1    &kp DEL  &kp SPACE                  &mo 4                   &mo 3 &kp ENTER &kp BSPC   &mo 2   &kp PSCRN
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
@@ -43,7 +43,7 @@
                         &kp TAB  &kp Q    &kp W    &kp E    &kp R    &kp T                                              &kp Y &kp U     &kp I      &kp O   &kp P     &kp MINUS
                         &kp LCTL &kp A    &kp S    &kp D    &kp F    &kp G                                              &kp H &kp J     &kp K      &kp L   &kp SCLN  &kp SQT
                         &kp LSFT &kp Z    &kp X    &kp C    &kp V    &kp B      &mkp LCLK                 &mkp RCLK     &kp N &kp M     &kp COMMA  &kp DOT &kp SLASH &kp RSHFT
-                        &kp LALT &kp LGUI          &MO 1    &kp DEL  &kp SPACE                  &MO 4                   &MO 3 &kp ENTER &kp BSPC           &MO 2     &kp PSCRN
+                        &kp LALT &kp LGUI          &mo 1    &kp DEL  &kp SPACE                  &mo 4                   &mo 3 &kp ENTER &kp BSPC           &mo 2     &kp PSCRN
             >; 
         };
 
@@ -52,7 +52,7 @@
                         &kp TAB  &kp Q    &kp W    &kp E    &kp R    &kp T                                              &kp Y &kp U     &kp I      &kp O   &kp P     &kp MINUS
                         &kp LCTL &kp A    &kp S    &kp D    &kp F    &kp G                                              &kp H &kp J     &kp K      &kp L   &kp SCLN  &kp SQT
                         &kp LSFT &kp Z    &kp X    &kp C    &kp V    &kp B      &mkp LCLK                 &mkp RCLK     &kp N &kp M     &kp COMMA  &kp DOT &kp SLASH &kp RSHFT
-                        &kp LALT &kp LGUI          &MO 1    &kp DEL  &kp SPACE                  &MO 4                   &MO 3 &kp ENTER &kp BSPC           &MO 2     &kp PSCRN
+                        &kp LALT &kp LGUI          &mo 1    &kp DEL  &kp SPACE                  &mo 4                   &mo 3 &kp ENTER &kp BSPC           &mo 2     &kp PSCRN
             >;
         };
     };
