@@ -6,5 +6,7 @@ url: https://boardsource.xyz/store/5ecc2008eee64242946c98c1
 requires: [seeeduino_xiao_ble]
 features:
   - keys
-  - zmk-analog-input-driver
-  - point
+  - studio
+  - pointer
+  - encoder
+  - underglow
