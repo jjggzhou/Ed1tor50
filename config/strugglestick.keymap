@@ -33,7 +33,7 @@
                         &kp TAB   &kp Q     &kp W    &kp E     &kp R     &kp T                                              
                         &kp LCTL  &kp A     &kp S    &kp D     &kp F     &kp G                                              
                         &kp LSFT  &kp Z     &kp X    &kp C     &kp V     &kp B      &mkp LCLK                 
-                        &kp LALT  &trans    &kp LGUI &mo 1     &kp DEL   &kp SPACE                  &mo 4                  
+                        &kp LALT  &trans    &kp LGUI &mo 1     &kp DEL   &kp SPACE  &mo 4                  
 
                         &kp MINUS &kp P     &kp O    &kp I     &kp U     &kp Y
                         &kp SQT   &kp SCLN  &kp L    &kp K     &kp J     &kp H     
