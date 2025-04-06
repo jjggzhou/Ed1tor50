@@ -90,17 +90,10 @@
 		status = "okay";
 	};
 
-	sensors {
-		left_encoder_sensors {
-			compatible = "zmk,keymap-sensors";
-			sensors = <&left_encoder>;
-			triggers-per-rotation = <15>;
-		};
-		right_encoder_sensors {
-			compatible = "zmk,keymap-sensors";
-			sensors = <&right_encoder>;
-			triggers-per-rotation = <15>;
-		};
+	sensors: encoder_sensors {
+		compatible = "zmk,keymap-sensors";
+		sensors = <&left_encoder &right_encoder>;
+		triggers-per-rotation = <15>;
 	};
 	
 	joystick_listener {
