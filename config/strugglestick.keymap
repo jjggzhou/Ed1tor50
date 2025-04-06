@@ -116,7 +116,7 @@
 &kp PSCRN  &mo 2               &kp BSPC   &kp ENTER  &mo 3
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&volknob>, <&rgbknob RGB_HUI RGB_HUD>;
         };
 
         num_layer {
