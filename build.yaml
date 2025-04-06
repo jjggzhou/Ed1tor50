@@ -1,10 +1,10 @@
 include:
   - board: seeeduino_xiao_ble
     shield: strugglestick rgbled_adapter
-    snippet: zmk-usb-logging
+    snippet: zmk-usb-logging studio-rpc-usb-uart
   - board: seeeduino_xiao_ble
     shield: settings_reset
-    
+
 # name: Build ZMK firmware
 # on: [push, pull_request, workflow_dispatch]
 
