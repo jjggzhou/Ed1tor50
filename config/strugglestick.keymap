@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <macros.dtsi>
 
 / {
     macros {
@@ -47,11 +46,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
         };
-        rgbknob: rgb_encoder {
-        compatible = "zmk,behavior-sensor-rotate-var";
-        #sensor-binding-cells = <2>;
-        bindings = <&rgb_ug>, <&rgb_ug>;
-        };
+
     };
 
     keymap {
@@ -62,14 +57,14 @@
 &kp TAB    &kp Q      &kp W    &kp E      &kp R      &kp T
 &kp LCTRL  &kp A      &kp S    &kp D      &kp F      &kp G
 &kp RSHFT  &kp Z      &kp X    &kp C      &kp V      &kp B      &mkp LCLK
-&kp LALT   &kp LGUI            &rgblayer 1 RGB_COLOR_HSB_VAL(80,70,50)      &kp DEL    &kp SPACE  &mo 4
+&kp LALT   &kp LGUI            &mo 1      &kp DEL    &kp SPACE  &mo 4
 &kp MINUS  &kp P      &kp O    &kp I      &kp U      &kp Y
 &kp SQT    &kp SLCK   &kp L    &kp K      &kp J      &kp H
 &kp RSHFT  &kp SLASH  &kp DOT  &kp COMMA  &kp M      &kp N      &mkp RCLK
 &kp PSCRN  &mo 2               &kp BSPC   &kp ENTER  &mo 3
             >;
 
-            sensor-bindings = <&rgbknob RGB_HUI RGB_HUD>, <&rgbknob RGB_BRI RGB_BRD>;
+            sensor-bindings = <&volknob>;
         };
 
         num_layer {
