@@ -15,7 +15,6 @@
         rgblayer: rgb_layer {
         compatible = "zmk,behavior-macro-two-param";
         #binding-cells = <2>;
-        label = "MOMENTARY_LAYER_WITH_RGB_COLOR";
         bindings
             = <&macro_param_2to2 &rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER &macro_param_1to1>
             , <&macro_press>
@@ -30,7 +29,6 @@
         shift: with_lshift {
         compatible = "zmk,behavior-macro-one-param";
         #binding-cells = <1>;
-        label = "KEY_PRESS_WITH_LEFT_SHIFT_MODIFIER";
         bindings
             = <&macro_press>
             , <&kp LSHFT>
@@ -45,13 +43,11 @@
     behaviors {
         volknob: volume_encoder {
         compatible = "zmk,behavior-sensor-rotate";
-        label = "ENCODER_VOLUME_KNOB";
         #sensor-binding-cells = <0>;
         bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
         };
         rgbknob: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate-var";
-        label = "ENCODER_RGB";
         #sensor-binding-cells = <2>;
         bindings = <&rgb_ug>, <&rgb_ug>;
         };
