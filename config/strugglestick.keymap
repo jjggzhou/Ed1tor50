@@ -73,7 +73,7 @@
 &kp PSCRN  &mo 2               &kp BSPC   &kp ENTER  &mo 3
             >;
 
-            sensor-bindings = <&rgb_hue>, <&volknob>;
+            sensor-bindings = <&rgb_hue &volknob>;
         };
 
         num_layer {
