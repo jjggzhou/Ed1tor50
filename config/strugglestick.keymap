@@ -42,14 +42,19 @@
 
     behaviors {
         volknob: volume_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <1>;
+            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
         };
-        rgbknob: rgb_encoder {
-        compatible = "zmk,behavior-sensor-rotate-var";
-        #sensor-binding-cells = <2>;
-        bindings = <&rgb_ug>, <&rgb_ug>;
+        rgb_hue: rgb_hue_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
+        };
+        rgb_brt: rgb_brt_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
     };
 
@@ -61,7 +66,7 @@
 &kp TAB    &kp Q      &kp W    &kp E      &kp R      &kp T
 &kp LCTRL  &kp A      &kp S    &kp D      &kp F      &kp G
 &kp RSHFT  &kp Z      &kp X    &kp C      &kp V      &kp B      &mkp LCLK
-&kp LALT   &kp LGUI            &mo 1      &kp DEL    &kp SPACE  &mo 4
+&kp LALT   &kp LGUI            &rgblayer 1 RGB_COLOR_HSB_VAL(80,70,50)      &kp DEL    &kp SPACE  &mo 4
 &kp MINUS  &kp P      &kp O    &kp I      &kp U      &kp Y
 &kp SQT    &kp SLCK   &kp L    &kp K      &kp J      &kp H
 &kp RSHFT  &kp SLASH  &kp DOT  &kp COMMA  &kp M      &kp N      &mkp RCLK
