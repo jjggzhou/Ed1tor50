@@ -21,6 +21,13 @@
     };
 };
 
+&pin_controller {
+    i2c0_default: i2c0_default {
+        #sensor-binding-cells = <0>;
+        // ... 其他现有配置保持不变
+    };
+};
+
 &spi3 {
     compatible = "nordic,nrf-spim";
     status = "okay";
