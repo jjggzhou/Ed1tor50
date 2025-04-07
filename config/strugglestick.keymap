@@ -72,7 +72,7 @@
 &kp PSCRN  &mo 2               &kp BSPC   &kp ENTER  &mo 3
             >;
 
-            sensor-bindings = <&volknob>, <&rgbknob RGB_HUI RGB_HUD>, <&rgbknob RGB_BRI RGB_BRD>;
+            sensor-bindings = <&rgbknob RGB_HUI RGB_HUD>, <&rgbknob RGB_BRI RGB_BRD>;
         };
 
         num_layer {
