@@ -76,14 +76,14 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q     &kp W    &kp E      &kp R                                   &kp T
-&td0       &kp A     &kp S    &kp D      &kp F                                   &kp G
-&kp LCTRL  &kp Z     &kp X    &kp C      &kp V                                   &kp B        &mkp LCLK
-&kp ESC    &mo 2              &kp LGUI   &rgblayer RGB_COLOR_HSB_VAL(0,95,45) 1  &lt 3 SPACE  &mo 3
-&kp BSPC   &kp P     &kp O    &kp I      &kp U                                   &kp Y
-&kp SQT    &kp SEMI  &kp L    &kp K      &kp J                                   &kp H
-&kp RSHFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M                                   &kp N        &mkp RCLK
-&kp PSCRN  &mo 2              &kp RALT   &mo 2                                   &lt 3 ENTER
+&kp TAB    &kp Q                                   &kp W    &kp E      &kp R                                   &kp T
+&td0       &kp A                                   &kp S    &kp D      &kp F                                   &kp G
+&kp LCTRL  &kp Z                                   &kp X    &kp C      &kp V                                   &kp B        &mkp LCLK
+&kp ESC    &mo 2                                            &kp LGUI   &rgblayer RGB_COLOR_HSB_VAL(0,95,45) 1  &lt 3 SPACE  &mo 3
+&kp BSPC   &rgblayer RGB_COLOR_HSB_VAL(0,87,50) 1  &kp O    &kp I      &kp U                                   &kp Y
+&kp SQT    &kp SEMI                                &kp L    &kp K      &kp J                                   &kp H
+&kp RSHFT  &kp FSLH                                &kp DOT  &kp COMMA  &kp M                                   &kp N        &mkp RCLK
+&kp PSCRN  &mo 2                                            &kp RALT   &mo 2                                   &lt 3 ENTER
             >;
 
             sensor-bindings = <&rgb_encoder>, <&volknob>;
