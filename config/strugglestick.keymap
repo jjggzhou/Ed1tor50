@@ -86,7 +86,7 @@
 &kp PSCRN  &mo 2              &kp RALT   &mo 2                                   &lt 3 ENTER
             >;
 
-            sensor-bindings = <&volknob>, <&rgb_encoder>;
+            sensor-bindings = <&rgb_encoder>, <&volknob>;
         };
 
         lower_layer {
