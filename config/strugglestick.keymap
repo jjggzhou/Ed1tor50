@@ -52,6 +52,12 @@
         };
     };
 
+    volknob: volume_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+    };
+
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
@@ -83,7 +89,7 @@
 &kp PSCRN  &mo 2               &kp RALT   &mo 2      &lt 3 ENTER
             >;
 
-            sensor-bindings = <&volknob>, <&rgb_hue>;
+            sensor-bindings = <&volknob>, <&rgb_encoder>;
         };
 
         lower_layer {
