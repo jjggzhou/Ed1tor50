@@ -2,4 +2,4 @@
 # SPDX-License-Identifier: MIT
 
 config SHIELD_STRUGGLESTICK
-    def_bool $(shields_list_contains,strugglestick)
+    def_bool $(shields_list_contains,Ed1tor50)

@@ -7,7 +7,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <input/processors.dtsi>
-#include "strugglestick-layouts.dtsi"
+#include "Ed1tor50-layouts.dtsi"
 
 
 &physical_layout0 {

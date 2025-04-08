@@ -1,9 +1,9 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_STRUGGLESTICK
+if SHIELD_Ed1tor50
 
 config ZMK_KEYBOARD_NAME
-    default "StruggleStick"
+    default "Ed1tor50"
     
 endif
