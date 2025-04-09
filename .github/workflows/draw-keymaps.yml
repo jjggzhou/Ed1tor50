@@ -5,7 +5,7 @@ on:
   push:               # automatically run on changes to following paths
     paths:
       - "config/Ed1tor50.keymap"
-      - "config/Ed1tor50-layouts.dtsi"
+      - "config/boards/shields/Ed1tor50/Ed1tor50-layouts.dtsi"
       - "Ed1tor50_drawer/*.dtsi"
       - "keymap_drawer.config.yaml"
       - ".github/workflows/draw.yml"
