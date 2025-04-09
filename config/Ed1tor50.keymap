@@ -4,4 +4,4 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "Ed1tor50_drawer/base.dtsi"
+#include "./Ed1tor50_drawer/base.dtsi"
