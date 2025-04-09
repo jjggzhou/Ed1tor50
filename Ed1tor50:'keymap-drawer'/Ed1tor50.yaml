@@ -1,0 +1,228 @@
+layout: {zmk_keyboard: Ed1tor50}
+layers:
+  L1:
+  - ESC
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - CANCEL
+  - {t: BACKSPACE, s: DELETE}
+  - A
+  - {t: S, h: LCTRL}
+  - {t: D, h: LALT}
+  - {t: F, h: LCMD}
+  - {t: G, h: Sft+Ctl+LALT}
+  - {t: H, h: Sft+Ctl+LALT}
+  - {t: J, h: LCMD}
+  - {t: K, h: LALT}
+  - {t: L, h: LCTRL}
+  - ''''
+  - ENTER
+  - '&csl 2'
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - N
+  - M
+  - ','
+  - .
+  - ;
+  - '&csl 2'
+  - ESC
+  - ESC
+  - TAB
+  - {t: SPACE, h: LSHFT}
+  - {t: '&num_dance', h: L2}
+  - '&mkp MB4'
+  - {t: '&num_dance', h: L2}
+  - {t: RSHFT, h: sticky, s: '&caps_word'}
+  - '`'
+  - ESC
+  - ESC
+  L2:
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - PREV
+  - VOL DN
+  - VOL UP
+  - NEXT
+  - MUTE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '6'
+  - {t: '7', h: LCTRL}
+  - {t: '8', h: LALT}
+  - {t: '9', h: LCMD}
+  - {t: '0', h: Sft+Ctl+LALT}
+  - {t: LEFT, h: Sft+Ctl+LALT}
+  - {t: DOWN, h: LCMD}
+  - {t: UP, h: LALT}
+  - {t: RIGHT, h: LCTRL}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '&cmo 1', type: held}
+  - '&mkp MB4'
+  - '&cmo 1'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Fn:
+  - OUT TOG
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - POWER
+  - {t: '&sys_reset', h: '&bootloader'}
+  - F6
+  - {t: F7, h: LCTRL}
+  - {t: F8, h: LALT}
+  - {t: F9, h: LCMD}
+  - {t: F10, h: Sft+Ctl+LALT}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '&sys_reset', h: '&bootloader'}
+  - '&cmo 2'
+  - F11
+  - F12
+  - F13
+  - F14
+  - F15
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&cmo 2'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BRI DN
+  - BRI UP
+  - '&cmo 1'
+  - '&mkp MB4'
+  - '&cmo 1'
+  - CAPSLOCK
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [1, 7]
+  k: '!'
+  l: [L1, L2]
+- p: [2, 8]
+  k: '@'
+  l: [L1, L2]
+- p: [3, 9]
+  k: '#'
+  l: [L1, L2]
+- p: [4, 10]
+  k: $
+  l: [L1, L2]
+- p: [5, 11]
+  k: '%'
+  l: [L1, L2]
+- p: [7, 13]
+  k: ^
+  l: [L1, L2]
+- p: [8, 14]
+  k: '&'
+  l: [L1, L2]
+- p: [9, 15]
+  k: '*'
+  l: [L1, L2]
+- p: [10, 16]
+  k: (
+  l: [L1, L2]
+- p: [11, 17]
+  k: )
+  l: [L1, L2]
+- p: [29, 35]
+  k: '-'
+  l: [L1, L2, Fn]
+- p: [28, 34]
+  k: '='
+  l: [L1, L2, Fn]
+- p: [27, 33]
+  k: /
+  l: [L1, L2, Fn]
+- p: [30, 36]
+  k: PG UP
+  l: [L1, L2, Fn]
+- p: [36, 42]
+  k: PG DN
+  l: [L1, L2, Fn]
+- p: [35, 41]
+  k: '['
+  l: [L1, L2, Fn]
+- p: [34, 40]
+  k: ']'
+  l: [L1, L2, Fn]
+- p: [33, 39]
+  k: \
+  l: [L1, L2, Fn]
+- p: [1, 2, 3, 4]
+  k: BT CLR
+  l: [Fn]
+- p: [1, 7]
+  k: {t: BT, h: '0'}
+  l: [Fn]
+- p: [2, 8]
+  k: {t: BT, h: '1'}
+  l: [Fn]
+- p: [3, 9]
+  k: {t: BT, h: '2'}
+  l: [Fn]
+- p: [4, 10]
+  k: {t: BT, h: '3'}
+  l: [Fn]
+- p: [5, 11]
+  k: {t: BT, h: '4'}
+  l: [Fn]
+- p: [30, 29]
+  k: PP
+  l: [L1, L2, Fn]
