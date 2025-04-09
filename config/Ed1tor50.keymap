@@ -6,3 +6,8 @@
 
 #include "Ed1tor50_drawer/base.dtsi"
 
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+    };
+};
