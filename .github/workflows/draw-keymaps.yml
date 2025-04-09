@@ -6,6 +6,7 @@ on:
     paths:
       - "config/Ed1tor50.keymap"
       - "config/Ed1tor50-layouts.dtsi"
+      - "Ed1tor50_drawer/*.dtsi"
       - "keymap_drawer.config.yaml"
       - ".github/workflows/draw.yml"
 concurrency:
@@ -18,10 +19,10 @@ jobs:
     permissions:
       contents: write  # allow workflow to commit to the repo
     with:
-      keymap_patterns: "config/*.keymap"        # path to the keymaps to parse
-      config_path: "keymap_drawer.config.yaml"  # config file, ignored if not exists
-      output_folder: "keymap-drawer"            # path to save produced SVG and keymap YAML files
-      parse_args: ""  # map of extra args to pass to `keymap parse`, e.g. "corne:'-l Def Lwr Rse' cradio:''"
-      draw_args: ""   # map of extra args to pass to `keymap draw`, e.g. "corne:'-k corne_rotated' cradio:'-k paroxysm'"
-      commit_message: "Ed1tor50(draw): keymap"
-      fail_on_error: true
+        install_branch: "dev" # branch to install keymap-drawer from
+        keymap_patterns: "config/Ed1tor50.keymap" # path to the keymaps to parse
+        config_path: "keymap-drawer/config.yaml" # config file, ignored if it doesn't exist
+        output_folder: "img" # path to save produced SVGs
+        extra_keymap_yaml: "Ed1tor50:'keymap-drawer/combos.yaml'"
+        commit_message: "chore(draw): keymap"
+        fail_on_error: true
