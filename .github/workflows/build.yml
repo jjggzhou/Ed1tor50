@@ -1,6 +1,14 @@
 name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
-
+on:
+  workflow_dispatch: # can be triggered manually
+  push:
+    paths:
+      - "build.yaml"
+      - "config/*.keymap"
+      - "config/*.dtsi"
+      - "config/*.conf"
+      - "config/west.yml"
+      - "Ed1tor50_drawer/*.dtsi"
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
