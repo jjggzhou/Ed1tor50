@@ -60,4 +60,17 @@
             , <&key_physical_attrs 100 100  775  406 (-2262)   825   456>
             ;
     };
+
+    keypad_position_map {
+    // Other properties
+
+        physical_layout0: physical_layout0 {
+            physical-layout = <&physical_layout0>;
+            positions // This is equivalent to `positions = <0 1 2 3>;`, reshaped for readability
+                = <  0  1  2  3  4  5          30 29 28 27 26 25 >
+                , <  6  7  8  9 10 11          36 35 34 33 32 31 >
+                , < 12 13 14 15 16 17 18    43 42 41 40 39 38 37 >
+                , < 19 20    21 22 23    24    48 47 46    45 44 >;
+        };
+    };
 };
