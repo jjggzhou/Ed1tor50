@@ -64,7 +64,7 @@
     keypad_position_map {
     // Other properties
 
-        physical_layout0: physical_layout0 {
+        position_map0: position_map0 {
             physical-layout = <&physical_layout0>;
             positions // This is equivalent to `positions = <0 1 2 3>;`, reshaped for readability
                 = <  0  1  2  3  4  5          30 29 28 27 26 25 >
