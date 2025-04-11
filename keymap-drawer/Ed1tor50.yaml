@@ -151,58 +151,58 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [1, 7]
+- p: [1, 13]
   k: '!'
   l: [L1, L2]
-- p: [2, 8]
+- p: [2, 14]
   k: '@'
   l: [L1, L2]
-- p: [3, 9]
+- p: [3, 15]
   k: '#'
   l: [L1, L2]
-- p: [4, 10]
+- p: [4, 16]
   k: $
   l: [L1, L2]
-- p: [5, 11]
+- p: [5, 17]
   k: '%'
   l: [L1, L2]
-- p: [7, 13]
+- p: [13, 25]
   k: ^
   l: [L1, L2]
-- p: [8, 14]
+- p: [14, 26]
   k: '&'
   l: [L1, L2]
-- p: [9, 15]
+- p: [15, 27]
   k: '*'
   l: [L1, L2]
-- p: [10, 16]
+- p: [16, 28]
   k: (
   l: [L1, L2]
-- p: [11, 17]
+- p: [17, 29]
   k: )
   l: [L1, L2]
-- p: [29, 35]
+- p: [7, 19]
   k: {h: '-', s: _}
   l: [L1, L2, Fn]
-- p: [28, 34]
+- p: [8, 20]
   k: {h: '=', s: +}
   l: [L1, L2, Fn]
-- p: [27, 33]
+- p: [9, 21]
   k: {t: /, s: '?'}
   l: [L1, L2, Fn]
-- p: [30, 36]
+- p: [6, 18]
   k: $$mdi:transfer-up$$
   l: [L1, L2, Fn]
-- p: [36, 42]
+- p: [18, 32]
   k: $$mdi:transfer-down$$
   l: [L1, L2, Fn]
-- p: [35, 41]
+- p: [19, 33]
   k: {h: '[', s: '{'}
   l: [L1, L2, Fn]
-- p: [34, 40]
+- p: [20, 34]
   k: {h: ']', s: '}'}
   l: [L1, L2, Fn]
-- p: [33, 39]
+- p: [21, 35]
   k: {h: \, s: '|'}
   l: [L1, L2, Fn]
 - p: [1, 2, 3, 4]
@@ -210,21 +210,21 @@ combos:
   l: [Fn]
   a: top
   o: 0.03
-- p: [1, 7]
+- p: [1, 13]
   k: {h: '1', s: '$$mdi:bluetooth-connect$$'}
   l: [Fn]
-- p: [2, 8]
+- p: [2, 14]
   k: {h: '2', s: '$$mdi:bluetooth-connect$$'}
   l: [Fn]
-- p: [3, 9]
+- p: [3, 15]
   k: {h: '3', s: '$$mdi:bluetooth-connect$$'}
   l: [Fn]
-- p: [4, 10]
+- p: [4, 16]
   k: {h: '4', s: '$$mdi:bluetooth-connect$$'}
   l: [Fn]
-- p: [5, 11]
+- p: [5, 17]
   k: {h: '5', s: '$$mdi:bluetooth-connect$$'}
   l: [Fn]
-- p: [30, 29]
+- p: [6, 7]
   k: $$mdi:play-pause$$
   l: [L1, L2, Fn]

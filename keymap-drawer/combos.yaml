@@ -1,7 +1,7 @@
 combos:
-  - p: [10, 11]
+  - p: [16, 17]
     k: { t: $$mdi:star-four-points$$ }
     l: [L1, L2, Fn]
-  - p: [36, 35]
+  - p: [18, 19]
     k: { t: $$mdi:star-four-points$$ }
     l: [L1, L2, Fn]
