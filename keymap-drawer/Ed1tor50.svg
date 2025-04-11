@@ -835,6 +835,88 @@ path.combo {
 <use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="708" y="168" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
 </g>
 </g>
+<g class="combo combopos-21">
+<g transform="rotate(22.62, 317.08000000000004, 92.38774307588389)">
+<rect rx="4" ry="4" x="302" y="77" width="30" height="30" class="combo"/>
+<text x="317" y="92" class="combo tap">#</text>
+</g>
+</g>
+<g class="combo combopos-22">
+<g transform="rotate(22.62, 391.12, 123.22774307588388)">
+<rect rx="4" ry="4" x="376" y="108" width="30" height="30" class="combo"/>
+<text x="391" y="123" class="combo tap">$</text>
+</g>
+</g>
+<g class="combo combopos-23">
+<g transform="rotate(22.62, 465.15999999999997, 154.1077430758839)">
+<rect rx="4" ry="4" x="450" y="139" width="30" height="30" class="combo"/>
+<text x="465" y="154" class="combo tap">%</text>
+</g>
+</g>
+<g class="combo combopos-24">
+<g transform="rotate(22.62, 301.03999999999996, 172.58774307588385)">
+<rect rx="4" ry="4" x="286" y="158" width="30" height="30" class="combo"/>
+<text x="301" y="173" class="combo tap">*</text>
+</g>
+</g>
+<g class="combo combopos-25">
+<g transform="rotate(22.62, 375.08000000000004, 203.46774307588387)">
+<rect rx="4" ry="4" x="360" y="188" width="30" height="30" class="combo"/>
+<text x="375" y="203" class="combo tap">(</text>
+</g>
+</g>
+<g class="combo combopos-26">
+<g transform="rotate(22.62, 449.12, 234.3077430758839)">
+<rect rx="4" ry="4" x="434" y="219" width="30" height="30" class="combo"/>
+<text x="449" y="234" class="combo tap">)</text>
+</g>
+</g>
+<g class="combo combopos-27">
+<g transform="rotate(-22.62, 747.6800000000001, 123.38774307588389)">
+<rect rx="4" ry="4" x="733" y="108" width="30" height="30" class="combo"/>
+<text x="748" y="134" class="combo hold">-</text>
+<text x="748" y="112" class="combo shifted">_</text>
+</g>
+</g>
+<g class="combo combopos-28">
+<g transform="rotate(-22.62, 821.72, 92.54774307588389)">
+<rect rx="4" ry="4" x="807" y="78" width="30" height="30" class="combo"/>
+<text x="822" y="104" class="combo hold">=</text>
+<text x="822" y="82" class="combo shifted">+</text>
+</g>
+</g>
+<g class="combo combopos-29">
+<g transform="rotate(-22.62, 673.6400000000001, 154.26774307588386)">
+<rect rx="4" ry="4" x="659" y="139" width="30" height="30" class="combo"/>
+<use href="#mdi:transfer-up" xlink:href="#mdi:transfer-up" x="663" y="143" height="22" width="22.0" class="combo tap glyph mdi:transfer-up"/>
+</g>
+</g>
+<g class="combo combopos-30">
+<g transform="rotate(-22.62, 689.6800000000001, 234.46774307588387)">
+<rect rx="4" ry="4" x="675" y="219" width="30" height="30" class="combo"/>
+<use href="#mdi:transfer-down" xlink:href="#mdi:transfer-down" x="679" y="223" height="22" width="22.0" class="combo tap glyph mdi:transfer-down"/>
+</g>
+</g>
+<g class="combo combopos-31">
+<g transform="rotate(-22.62, 763.72, 203.6277430758839)">
+<rect rx="4" ry="4" x="749" y="189" width="30" height="30" class="combo"/>
+<text x="764" y="215" class="combo hold">[</text>
+<text x="764" y="193" class="combo shifted">{</text>
+</g>
+</g>
+<g class="combo combopos-32">
+<g transform="rotate(-22.62, 837.76, 172.74774307588388)">
+<rect rx="4" ry="4" x="823" y="158" width="30" height="30" class="combo"/>
+<text x="838" y="184" class="combo hold">]</text>
+<text x="838" y="162" class="combo shifted">}</text>
+</g>
+</g>
+<g class="combo combopos-33">
+<g transform="rotate(-22.62, 702.6400000000001, 98.70774307588388)">
+<rect rx="4" ry="4" x="688" y="84" width="30" height="30" class="combo"/>
+<use href="#mdi:play-pause" xlink:href="#mdi:play-pause" x="692" y="88" height="22" width="22.0" class="combo tap glyph mdi:play-pause"/>
+</g>
+</g>
 </g>
 </g>
 <g transform="translate(0, 434)" class="layer-L2">
@@ -1158,6 +1240,88 @@ path.combo {
 <use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="708" y="168" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
 </g>
 </g>
+<g class="combo combopos-21">
+<g transform="rotate(22.62, 317.08000000000004, 92.38774307588389)">
+<rect rx="4" ry="4" x="302" y="77" width="30" height="30" class="combo"/>
+<text x="317" y="92" class="combo tap">#</text>
+</g>
+</g>
+<g class="combo combopos-22">
+<g transform="rotate(22.62, 391.12, 123.22774307588388)">
+<rect rx="4" ry="4" x="376" y="108" width="30" height="30" class="combo"/>
+<text x="391" y="123" class="combo tap">$</text>
+</g>
+</g>
+<g class="combo combopos-23">
+<g transform="rotate(22.62, 465.15999999999997, 154.1077430758839)">
+<rect rx="4" ry="4" x="450" y="139" width="30" height="30" class="combo"/>
+<text x="465" y="154" class="combo tap">%</text>
+</g>
+</g>
+<g class="combo combopos-24">
+<g transform="rotate(22.62, 301.03999999999996, 172.58774307588385)">
+<rect rx="4" ry="4" x="286" y="158" width="30" height="30" class="combo"/>
+<text x="301" y="173" class="combo tap">*</text>
+</g>
+</g>
+<g class="combo combopos-25">
+<g transform="rotate(22.62, 375.08000000000004, 203.46774307588387)">
+<rect rx="4" ry="4" x="360" y="188" width="30" height="30" class="combo"/>
+<text x="375" y="203" class="combo tap">(</text>
+</g>
+</g>
+<g class="combo combopos-26">
+<g transform="rotate(22.62, 449.12, 234.3077430758839)">
+<rect rx="4" ry="4" x="434" y="219" width="30" height="30" class="combo"/>
+<text x="449" y="234" class="combo tap">)</text>
+</g>
+</g>
+<g class="combo combopos-27">
+<g transform="rotate(-22.62, 747.6800000000001, 123.38774307588389)">
+<rect rx="4" ry="4" x="733" y="108" width="30" height="30" class="combo"/>
+<text x="748" y="134" class="combo hold">-</text>
+<text x="748" y="112" class="combo shifted">_</text>
+</g>
+</g>
+<g class="combo combopos-28">
+<g transform="rotate(-22.62, 821.72, 92.54774307588389)">
+<rect rx="4" ry="4" x="807" y="78" width="30" height="30" class="combo"/>
+<text x="822" y="104" class="combo hold">=</text>
+<text x="822" y="82" class="combo shifted">+</text>
+</g>
+</g>
+<g class="combo combopos-29">
+<g transform="rotate(-22.62, 673.6400000000001, 154.26774307588386)">
+<rect rx="4" ry="4" x="659" y="139" width="30" height="30" class="combo"/>
+<use href="#mdi:transfer-up" xlink:href="#mdi:transfer-up" x="663" y="143" height="22" width="22.0" class="combo tap glyph mdi:transfer-up"/>
+</g>
+</g>
+<g class="combo combopos-30">
+<g transform="rotate(-22.62, 689.6800000000001, 234.46774307588387)">
+<rect rx="4" ry="4" x="675" y="219" width="30" height="30" class="combo"/>
+<use href="#mdi:transfer-down" xlink:href="#mdi:transfer-down" x="679" y="223" height="22" width="22.0" class="combo tap glyph mdi:transfer-down"/>
+</g>
+</g>
+<g class="combo combopos-31">
+<g transform="rotate(-22.62, 763.72, 203.6277430758839)">
+<rect rx="4" ry="4" x="749" y="189" width="30" height="30" class="combo"/>
+<text x="764" y="215" class="combo hold">[</text>
+<text x="764" y="193" class="combo shifted">{</text>
+</g>
+</g>
+<g class="combo combopos-32">
+<g transform="rotate(-22.62, 837.76, 172.74774307588388)">
+<rect rx="4" ry="4" x="823" y="158" width="30" height="30" class="combo"/>
+<text x="838" y="184" class="combo hold">]</text>
+<text x="838" y="162" class="combo shifted">}</text>
+</g>
+</g>
+<g class="combo combopos-33">
+<g transform="rotate(-22.62, 702.6400000000001, 98.70774307588388)">
+<rect rx="4" ry="4" x="688" y="84" width="30" height="30" class="combo"/>
+<use href="#mdi:play-pause" xlink:href="#mdi:play-pause" x="692" y="88" height="22" width="22.0" class="combo tap glyph mdi:play-pause"/>
+</g>
+</g>
 </g>
 </g>
 <g transform="translate(0, 869)" class="layer-Fn">
@@ -1466,6 +1630,73 @@ path.combo {
 <g transform="rotate(-22.62, 718.6800000000001, 178.94774307588386)">
 <rect rx="4" ry="4" x="704" y="164" width="30" height="30" class="combo"/>
 <use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="708" y="168" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
+</g>
+</g>
+<g class="combo combopos-17">
+<g transform="rotate(-22.62, 747.6800000000001, 123.38774307588389)">
+<rect rx="4" ry="4" x="733" y="108" width="30" height="30" class="combo"/>
+<text x="748" y="134" class="combo hold">-</text>
+<text x="748" y="112" class="combo shifted">_</text>
+</g>
+</g>
+<g class="combo combopos-18">
+<g transform="rotate(-22.62, 821.72, 92.54774307588389)">
+<rect rx="4" ry="4" x="807" y="78" width="30" height="30" class="combo"/>
+<text x="822" y="104" class="combo hold">=</text>
+<text x="822" y="82" class="combo shifted">+</text>
+</g>
+</g>
+<g class="combo combopos-19">
+<g transform="rotate(-22.62, 673.6400000000001, 154.26774307588386)">
+<rect rx="4" ry="4" x="659" y="139" width="30" height="30" class="combo"/>
+<use href="#mdi:transfer-up" xlink:href="#mdi:transfer-up" x="663" y="143" height="22" width="22.0" class="combo tap glyph mdi:transfer-up"/>
+</g>
+</g>
+<g class="combo combopos-20">
+<g transform="rotate(-22.62, 689.6800000000001, 234.46774307588387)">
+<rect rx="4" ry="4" x="675" y="219" width="30" height="30" class="combo"/>
+<use href="#mdi:transfer-down" xlink:href="#mdi:transfer-down" x="679" y="223" height="22" width="22.0" class="combo tap glyph mdi:transfer-down"/>
+</g>
+</g>
+<g class="combo combopos-21">
+<g transform="rotate(-22.62, 763.72, 203.6277430758839)">
+<rect rx="4" ry="4" x="749" y="189" width="30" height="30" class="combo"/>
+<text x="764" y="215" class="combo hold">[</text>
+<text x="764" y="193" class="combo shifted">{</text>
+</g>
+</g>
+<g class="combo combopos-22">
+<g transform="rotate(-22.62, 837.76, 172.74774307588388)">
+<rect rx="4" ry="4" x="823" y="158" width="30" height="30" class="combo"/>
+<text x="838" y="184" class="combo hold">]</text>
+<text x="838" y="162" class="combo shifted">}</text>
+</g>
+</g>
+<g class="combo combopos-23">
+<g transform="rotate(22.62, 317.08000000000004, 92.38774307588389)">
+<rect rx="4" ry="4" x="302" y="77" width="30" height="30" class="combo"/>
+<text x="317" y="103" class="combo hold">3</text>
+<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="309" y="81" height="16" width="16.0" class="combo shifted glyph mdi:bluetooth-connect"/>
+</g>
+</g>
+<g class="combo combopos-24">
+<g transform="rotate(22.62, 391.12, 123.22774307588388)">
+<rect rx="4" ry="4" x="376" y="108" width="30" height="30" class="combo"/>
+<text x="391" y="134" class="combo hold">4</text>
+<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="383" y="112" height="16" width="16.0" class="combo shifted glyph mdi:bluetooth-connect"/>
+</g>
+</g>
+<g class="combo combopos-25">
+<g transform="rotate(22.62, 465.15999999999997, 154.1077430758839)">
+<rect rx="4" ry="4" x="450" y="139" width="30" height="30" class="combo"/>
+<text x="465" y="165" class="combo hold">5</text>
+<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="457" y="143" height="16" width="16.0" class="combo shifted glyph mdi:bluetooth-connect"/>
+</g>
+</g>
+<g class="combo combopos-26">
+<g transform="rotate(-22.62, 702.6400000000001, 98.70774307588388)">
+<rect rx="4" ry="4" x="688" y="84" width="30" height="30" class="combo"/>
+<use href="#mdi:play-pause" xlink:href="#mdi:play-pause" x="692" y="88" height="22" width="22.0" class="combo tap glyph mdi:play-pause"/>
 </g>
 </g>
 </g>
