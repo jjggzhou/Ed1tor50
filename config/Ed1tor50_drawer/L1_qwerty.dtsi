@@ -13,28 +13,24 @@
 /**
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮                                   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 // │0              │1              │2              │3              │4              │5              │                                   │6              │7              │8              │9              │10             │11             │*/
-    &kp ESC         &kp Q           &kp W           &kp E           &kp R           &kp R                                               
+    &kp ESC         &kp Q           &kp W           &kp E           &kp R           &kp R                                               &kp Y           &kp U           &kp I           &kp O           &kp P           &kp K_CANCEL
 /**
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                                   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 // │12             │13             │14             │15             │16             │17             │                                   │18             │19             │20             │21             │22             │23             │*/
-    &bkspc_del      &kp A           &hrml LCTRL S   &hrml LALT D    &hrml LCMD F    &hrml MEH G                                         
+    &bkspc_del      &kp A           &hrml LCTRL S   &hrml LALT D    &hrml LCMD F    &hrml MEH G                                         &hrmr MEH H     &hrmr LCMD J    &hrmr LALT K    &hrmr LCTRL L   &kp SQT         &kp ENTER
 
 /**
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                                   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 // │24             │25             │26             │27             │28             │29             │                                   │30             │31             │32             │33             │34             │35             │*/
-    &csl Fn         &kp Z           &kp X           &kp C           &kp V           &kp B           &mkp LCLK                
+    &csl Fn         &kp Z           &kp X           &kp C           &kp V           &kp B           &mkp LCLK                &mkp RCLK  &kp N           &kp M           &kp COMMA       &kp DOT         &kp SEMICOLON   &csl Fn
 
 /**
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤                                   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                 │36             │37             │38             │                                   │39             │40             │41             │*/
-    &kp ESC         &kp ESC                         &kp TAB         &mt LSHFT SPACE &smart_num L2 0              &mkp MB4               
+    &kp ESC         &kp ESC                         &kp TAB         &mt LSHFT SPACE &smart_num L2 0              &mkp MB4               &smart_num L2 0 &smart_shift    &kp GRAVE                       &kp ESC         &kp ESC
 
 /**
 //                                                 ╰───────────────┴───────────────┴───────────────╯                                   ╰───────────────┴───────────────┴───────────────╯*/
-&kp K_CANCEL    &kp P           &kp O           &kp I           &kp U           &kp Y
-&kp ENTER       &kp SQT         &hrmr LCTRL L   &hrmr LALT K    &hrmr LCMD J    &hrmr MEH H
-&kp SEMICOLON   &kp DOT         &kp COMMA       &kp M           &kp N           &csl Fn            &mkp RCLK       
-&kp ESC         &kp ESC         &kp GRAVE       &smart_shift    &smart_num L2 0
       >;
     };
   };
