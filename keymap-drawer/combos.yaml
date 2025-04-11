@@ -2,6 +2,8 @@ combos:
   - p: [16, 17]
     k: { t: $$mdi:star-four-points$$ }
     l: [L1, L2, Fn]
+    r: 22.62
   - p: [18, 19]
     k: { t: $$mdi:star-four-points$$ }
     l: [L1, L2, Fn]
+    r: -22.62
