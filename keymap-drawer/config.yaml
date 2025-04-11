@@ -634,13 +634,17 @@ draw_config:
     .keypos-12 .key,
     .keypos-23 .key,
     .keypos-24 .key,
-    .keypos-35 .key,
-    .keypos-36 .key,
     .keypos-37 .key,
     .keypos-38 .key,
     .keypos-39 .key,
     .keypos-40 .key,
-    .keypos-41 .key {
+    .keypos-41 .key,
+    .keypos-42 .key,
+    .keypos-44 .key
+    .keypos-45 .key,
+    .keypos-46 .key,
+    .keypos-47 .key,
+    .keypos-48 .key  {
         --color--key--bg: var(--color--material--blue-gray--100);
         --color--key--border: var(--color--material--blue-gray--50);
     }
