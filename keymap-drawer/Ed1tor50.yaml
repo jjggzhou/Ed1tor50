@@ -7,12 +7,24 @@ layers:
   - E
   - R
   - R
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - $$mdi:close-box$$
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$', type: backspace}
   - A
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
   - {t: D, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - {t: G, h: '$$mdi:triangle$$'}
+  - {t: H, h: '$$mdi:triangle$$'}
+  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '''', s: '"'}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: Fn, h: '$$mdi:close-box$$'}
   - Z
   - X
@@ -20,36 +32,24 @@ layers:
   - V
   - B
   - '&mkp LCLK'
+  - '&mkp RCLK'
+  - N
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: ;, s: ':'}
+  - {t: Fn, h: '$$mdi:close-box$$'}
   - $$mdi:keyboard-esc$$
   - $$mdi:keyboard-esc$$
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
   - '&mkp MB4'
-  - $$mdi:close-box$$
-  - P
-  - O
-  - I
-  - U
-  - Y
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '''', s: '"'}
-  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: H, h: '$$mdi:triangle$$'}
-  - {t: ;, s: ':'}
-  - {t: ., s: '>'}
-  - {t: ',', s: <}
-  - M
-  - N
-  - {t: Fn, h: '$$mdi:close-box$$'}
-  - '&mkp RCLK'
-  - $$mdi:keyboard-esc$$
-  - $$mdi:keyboard-esc$$
-  - {t: '`', s: '~'}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
+  - {t: '`', s: '~'}
+  - $$mdi:keyboard-esc$$
+  - $$mdi:keyboard-esc$$
   L2:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
