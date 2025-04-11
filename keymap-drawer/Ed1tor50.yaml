@@ -15,14 +15,14 @@ layers:
   - $$mdi:close-box$$
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$', type: backspace}
   - A
-  - '&hrml LCTRL S'
-  - '&hrml LALT D'
-  - '&hrml LCMD F'
-  - '&hrml LS(LC(LALT)) G'
-  - '&hrmr LS(LC(LALT)) H'
-  - '&hrmr LCMD J'
-  - '&hrmr LALT K'
-  - '&hrmr LCTRL L'
+  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: G, h: '$$mdi:triangle$$'}
+  - {t: H, h: '$$mdi:triangle$$'}
+  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
   - {t: '''', s: '"'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: Fn, h: '$$mdi:close-box$$'}
@@ -46,7 +46,7 @@ layers:
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
   - '&mkp MB4'
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
-  - '&smart_shift'
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
   - {t: '`', s: '~'}
   - $$mdi:keyboard-esc$$
   - $$mdi:keyboard-esc$$
@@ -65,14 +65,14 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '6', s: ^}
-  - '&hrml LCTRL N7'
-  - '&hrml LALT N8'
-  - '&hrml LCMD N9'
-  - '&hrml LS(LC(LALT)) N0'
-  - '&hrmr LS(LC(LALT)) LEFT'
-  - '&hrmr LCMD DOWN'
-  - '&hrmr LALT UP'
-  - '&hrmr LCTRL RIGHT'
+  - {t: '7', h: '$$mdi:apple-keyboard-control$$', s: '&'}
+  - {t: '8', h: '$$mdi:apple-keyboard-option$$', s: '*'}
+  - {t: '9', h: '$$mdi:apple-keyboard-command$$', s: (}
+  - {t: '0', h: '$$mdi:triangle$$', s: )}
+  - {t: '$$mdi:arrow-left-bold$$', h: '$$mdi:triangle$$'}
+  - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$mdi:arrow-up-bold$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:arrow-right-bold$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -115,10 +115,10 @@ layers:
   - $$mdi:power-standby$$
   - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$', type: bootloader}
   - F6
-  - '&hrml LCTRL F7'
-  - '&hrml LALT F8'
-  - '&hrml LCMD F9'
-  - '&hrml LS(LC(LALT)) F10'
+  - {t: F7, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F8, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: F9, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: F10, h: '$$mdi:triangle$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -150,3 +150,81 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [1, 13]
+  k: '!'
+  l: [L1, L2]
+- p: [2, 14]
+  k: '@'
+  l: [L1, L2]
+- p: [3, 15]
+  k: '#'
+  l: [L1, L2]
+- p: [4, 16]
+  k: $
+  l: [L1, L2]
+- p: [5, 17]
+  k: '%'
+  l: [L1, L2]
+- p: [13, 25]
+  k: ^
+  l: [L1, L2]
+- p: [14, 26]
+  k: '&'
+  l: [L1, L2]
+- p: [15, 27]
+  k: '*'
+  l: [L1, L2]
+- p: [16, 28]
+  k: (
+  l: [L1, L2]
+- p: [17, 29]
+  k: )
+  l: [L1, L2]
+- p: [7, 19]
+  k: {h: '-', s: _}
+  l: [L1, L2, Fn]
+- p: [8, 20]
+  k: {h: '=', s: +}
+  l: [L1, L2, Fn]
+- p: [9, 21]
+  k: {t: /, s: '?'}
+  l: [L1, L2, Fn]
+- p: [6, 18]
+  k: $$mdi:transfer-up$$
+  l: [L1, L2, Fn]
+- p: [18, 32]
+  k: $$mdi:transfer-down$$
+  l: [L1, L2, Fn]
+- p: [19, 33]
+  k: {h: '[', s: '{'}
+  l: [L1, L2, Fn]
+- p: [20, 34]
+  k: {h: ']', s: '}'}
+  l: [L1, L2, Fn]
+- p: [21, 35]
+  k: {h: \, s: '|'}
+  l: [L1, L2, Fn]
+- p: [1, 2, 3, 4]
+  k: $$mdi:bluetooth-off$$
+  l: [Fn]
+  a: top
+  o: 0.03
+- p: [1, 13]
+  k: {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  l: [Fn]
+- p: [2, 14]
+  k: {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  l: [Fn]
+- p: [3, 15]
+  k: {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  l: [Fn]
+- p: [4, 16]
+  k: {h: '4', s: '$$mdi:bluetooth-connect$$'}
+  l: [Fn]
+- p: [5, 17]
+  k: {h: '5', s: '$$mdi:bluetooth-connect$$'}
+  l: [Fn]
+- p: [6, 7]
+  k: $$mdi:play-pause$$
+  l: [L1, L2, Fn]
