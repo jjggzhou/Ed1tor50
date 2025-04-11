@@ -31,6 +31,13 @@
 
 /**
 //                                                 ╰───────────────┴───────────────┴───────────────╯                                   ╰───────────────┴───────────────┴───────────────╯*/
+<<<<<<< HEAD
+=======
+&kp K_CANCEL    &kp P           &kp O           &kp I           &kp U           &kp Y
+&kp ENTER       &kp SQT         &hrmr LCTRL L   &hrmr LALT K    &hrmr LCMD J    &hrmr MEH H
+&kp SEMICOLON   &kp DOT         &kp COMMA       &kp M           &kp N           &csl Fn            &mkp RCLK       
+&kp ESC         &kp ESC         &kp GRAVE       &smart_shift    &smart_num L2 0
+>>>>>>> origin/main
       >;
     };
   };
