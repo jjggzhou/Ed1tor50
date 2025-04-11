@@ -1,5 +1,5 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_STRUGGLESTICK
+config SHIELD_Ed1tor50
     def_bool $(shields_list_contains,Ed1tor50)
