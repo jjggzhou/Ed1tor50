@@ -370,6 +370,10 @@ draw_config:
   glyph_hold_size: 16
   glyph_shifted_size: 16
 
+  glyphs: {}
+  glyph_urls:
+    mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
+
   # Custom CSS
   svg_style: |
     /* inherit to force styles through use tags */
