@@ -8,7 +8,7 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <input/processors.dtsi>
 #include "Ed1tor50-layouts.dtsi"
-#include <dt-bindings/zmk/led.h>
+#include <dt-bindings/led/led.h>
 
 
 &physical_layout0 {
