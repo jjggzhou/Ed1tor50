@@ -1,12 +1,11 @@
 /* Copied (modified) from https://github.com/caksoylar/zmk-config */
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ROTATION) \
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP) \
   combo_##NAME { \
     timeout-ms = <TERM>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
     require-prior-idle-ms = <QUICKTAP>; \
-    rotation = <ROTATION>; \
   };
 
 / {
