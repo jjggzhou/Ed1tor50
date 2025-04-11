@@ -27,4 +27,5 @@ jobs:
         output_folder: "keymap-drawer" # path to save produced SVGs
         extra_keymap_yaml: "Ed1tor50:'keymap-drawer/combos.yaml'"
         amend_commit: true
+        draw_debug: true
         fail_on_error: true
