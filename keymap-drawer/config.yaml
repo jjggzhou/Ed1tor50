@@ -225,6 +225,9 @@ parse_config:
     RCMD: $$mdi:apple-keyboard-command$$
     LS(LC(LALT)): $$mdi:triangle$$ # Meh
 
+    LCLK: $$mdi:mouse-left-click-outline$$
+    RCLK: $$mdi:mouse-right-click-outline$$
+
     # Arrows
     UP: $$mdi:arrow-up-bold$$
     DOWN: $$mdi:arrow-down-bold$$
