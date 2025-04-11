@@ -212,6 +212,13 @@ parse_config:
       tap: 0
       shifted: ")"
 
+    "&mkp LCLK":
+      tap: $$mdi:mouse-left-click-outline$$
+    "&mkp RCLK":
+      tap: $$mdi:mouse-right-click-outline$$
+    "&mkp MCLK":
+      tap: $$mdi:mouse-scroll-wheel$$
+
     # Modifiers
     LCTRL: $$mdi:apple-keyboard-control$$
     LALT: $$mdi:apple-keyboard-option$$
@@ -224,9 +231,6 @@ parse_config:
     RSHFT: $$mdi:apple-keyboard-shift$$
     RCMD: $$mdi:apple-keyboard-command$$
     LS(LC(LALT)): $$mdi:triangle$$ # Meh
-
-    LCLK: $$mdi:mouse-left-click-outline$$
-    RCLK: $$mdi:mouse-right-click-outline$$
 
     # Arrows
     UP: $$mdi:arrow-up-bold$$
