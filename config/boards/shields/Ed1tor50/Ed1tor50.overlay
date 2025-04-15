@@ -173,7 +173,7 @@
 		};
 		x-ch {
 			io-channels = <&adc 1>;
-			mv-mid = <1660>;
+			mv-mid = <900>;
 			mv-min-max = <800>;
 			mv-deadzone = <100>;
 			scale-multiplier = <1>;
