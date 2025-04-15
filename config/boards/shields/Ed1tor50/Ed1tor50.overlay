@@ -22,6 +22,13 @@
 		zmk,physical-layout = &physical_layout0;
     };
 
+        // 定义GPIO别名
+    aliases {
+        my-gpio0-16 = &gpio0_16;
+        my-gpio1-00 = &gpio1_0;
+        my-gpio0-10 = &gpio0_10;
+    };
+
     kscan0: kscan_matrix {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;	
@@ -110,10 +117,27 @@
 
 &gpio0 {
     status = "okay";
+    gpio0_16: gpio@10 {
+        gpio-controller;
+        #gpio-cells = <2>;
+        reg = <16>;
+        bias-pull-down; // 按需配置上拉/下拉
+    };
+    gpio0_10: gpio@a {
+        gpio-controller;
+        #gpio-cells = <2>;
+        reg = <10>;
+        bias-pull-down;
 };
 
 &gpio1 {
     status = "okay";
+    gpio1_0: gpio@10000 {
+        gpio-controller;
+        #gpio-cells = <2>;
+        reg = <0>;
+        bias-pull-up;
+    };
 };
 
 &pinctrl {
