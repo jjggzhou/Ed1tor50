@@ -417,6 +417,7 @@
     &trans          &trans                          &trans          &trans          &cmo L2                      &mkp MB4               &cmo L2         &trans          &trans                          &trans          &trans
 //                                                 ╰───────────────┴───────────────┴───────────────╯                                   ╰───────────────┴───────────────┴───────────────╯
       >;
+      sensor-bindings = <&rgb_encoder>, <&volknob>;
     };
 
     fn_layer {
@@ -436,6 +437,7 @@
     &trans          &trans                          &kp C_BRI_DN    &kp C_BRI_UP    &cmo L2                      &mkp MB4               &cmo L2         &kp CAPSLOCK    &trans                          &trans          &trans
 //                                                 ╰───────────────┴───────────────┴───────────────╯                                   ╰───────────────┴───────────────┴───────────────╯
       >;
+      sensor-bindings = <&rgb_encoder>, <&volknob>;
     };
 
   };
