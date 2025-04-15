@@ -29,6 +29,34 @@
         my-gpio0-10 = &gpio0_10;
     };
 
+    gpio0_16: gpio@10 {
+        gpio-controller;
+        #gpio-cells = <2>;
+        reg = <0x50000000 0x1000>;
+        gpio0_16_pin {
+            reg = <16>;
+            bias-pull-down;
+        };
+    };
+
+    gpio0_10: gpio@a {
+        gpio-controller;
+        #gpio-cells = <2>;
+        reg = <0x50000000 0x1000>;
+        gpio0_10_pin {
+            reg = <10>;
+            bias-pull-down;
+        };
+    };
+
+    gpio1_0: gpio@10000 {
+        gpio-controller;
+        #gpio-cells = <2>;
+        reg = <0x50000000 0x1000>;
+        gpio1_0_pin {
+            reg = <0>;
+            bias-pull-up;
+        };
 
     kscan0: kscan_matrix {
         compatible = "zmk,kscan-gpio-matrix";
@@ -118,28 +146,10 @@
 
 &gpio0 {
     status = "okay";
-    gpio0_16: gpio@10 {
-        gpio-controller;
-        #gpio-cells = <2>;
-        reg = <16>;
-        bias-pull-down; // 按需配置上拉/下拉
-    };
-    gpio0_10: gpio@a {
-        gpio-controller;
-        #gpio-cells = <2>;
-        reg = <10>;
-        bias-pull-down;
-    };
 };
 
 &gpio1 {
     status = "okay";
-    gpio1_0: gpio@10000 {
-        gpio-controller;
-        #gpio-cells = <2>;
-        reg = <0>;
-        bias-pull-up;
-    };
 };
 
 &pinctrl {
