@@ -22,54 +22,30 @@
 		zmk,physical-layout = &physical_layout0;
     };
 
-    xiao_d: connector {
-        compatible = "seeed,xiao-gpio";
-        #gpio-cells = <2>;
-        gpio-map-mask = <0xffffffff 0xffffffc0>;
-        gpio-map-pass-thru = <0 0x3f>;
-        gpio-map
-            = <1 0 &gpio0 4 0>      /* D0 */
-            , <2 0 &gpio0 5 0>      /* D1 */
-            , <3 0 &gpio0 9 0>      /* D2 */
-            , <4 0 &gpio0 10 0>      /* D3 */
-            , <5 0 &gpio0 15 0>      /* D4 */
-            , <6 0 &gpio0 16 0>      /* D5 */
-            , <7 0 &gpio0 19 0>      /* D6 */
-            , <8 0 &gpio0 31 0>      /* D7 */       /* D10 */
-			, <9 0 &gpio1 7 0>
-			, <10 0 &gpio1 14 0>
-			, <11 0 &gpio1 1 0>
-			, <12 0 &gpio1 0 0>
-			, <13 0 &gpio1 10 0>
-			, <14 0 &gpio1 3 0>
-			, <15 0 &gpio1 12 0>
-            ;
-    };
-
     kscan0: kscan_matrix {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;	
         diode-direction = "col2row";
 
          col-gpios
-            = <&xiao_d 1 GPIO_ACTIVE_HIGH>
-	    , <&xiao_d 5 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 9 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 7 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 10 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 11 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 12 GPIO_ACTIVE_HIGH>
+            = <&gpio0 4 GPIO_ACTIVE_HIGH>
+	    , <&gpio0 15 GPIO_ACTIVE_HIGH>
+            , <&gpio1 7 GPIO_ACTIVE_HIGH>
+            , <&gpio0 19 GPIO_ACTIVE_HIGH>
+            , <&gpio1 14 GPIO_ACTIVE_HIGH>
+            , <&gpio1 1 GPIO_ACTIVE_HIGH>
+            , <&gpio1 0 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
-            = <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 
@@ -121,10 +97,10 @@
 	};
 
 	EXT_POWER {
-		compatible = "zmk,ext-power-generic";
-		control-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
-		init-delay-ms = <50>;
-	};
+	compatible = "zmk,ext-power-generic";
+	control-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
+	init-delay-ms = <50>;
+    };
 	
 };
 
