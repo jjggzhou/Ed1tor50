@@ -120,6 +120,7 @@
 		device = <&anin0>;
 	};
 
+	
 };
 
 &adc {
