@@ -94,6 +94,7 @@
 &trans     &rgb_ug RGB_OFF  &rgb_ug RGB_ON   &trans           &trans           &rgb_ug RGB_EFF  &mkp LCLK      &kp PG_DN  &kp END          &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFR  &mkp RCLK
 &trans     &trans                            &trans           &trans           &trans           &mo 3          &trans     &trans                            &trans           &kp DEL          &kp INS
             >;
+            sensor-bindings = <&rgb_encoder>, <&volknob>;
         };
 
         raise_layer {
@@ -108,6 +109,7 @@
 
 
             >;
+            sensor-bindings = <&rgb_encoder>, <&volknob>;
         };
 
         layer_3 {
@@ -118,6 +120,7 @@
 &trans           &sys_reset       &trans      &bootloader  &trans     &mkp MB5     &mkp LCLK     &kp PAUSE_BREAK  &kp SCROLLLOCK   &sys_reset  &bootloader  &trans     &trans       &mkp RCLK
 &trans           &trans                       &trans       &trans     &trans       &mo 3         &trans           &trans                       &trans       &trans     &trans
             >;
+            sensor-bindings = <&rgb_encoder>, <&volknob>;
         };
     };
 };
