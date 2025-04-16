@@ -140,6 +140,10 @@
     status = "okay";
 };
 
+&xiao_d {
+    status = "okay";
+};
+
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
