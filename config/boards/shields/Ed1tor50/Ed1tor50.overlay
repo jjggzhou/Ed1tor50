@@ -133,6 +133,12 @@
 };
 
 &gpio0 {
+    bat_sink: bat-sink {
+        gpio-hog;
+        gpios = <14 GPIO_ACTIVE_LOW>;
+        output-low;
+        line-name = "BAT Voltage Sink";
+    };
     status = "okay";
 };
 
@@ -143,6 +149,10 @@
 &xiao_d {
     status = "okay";
 };
+
+&xiao_spi { status = "disabled"; };
+&xiao_i2c { status = "disabled"; };
+&xiao_serial { status = "disabled"; };
 
 &pinctrl {
     spi3_default: spi3_default {
