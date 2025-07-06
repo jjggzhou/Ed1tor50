@@ -1,6 +1,6 @@
 include:
   - board: nrfmicro_13
-    shield: Ed1tor50 rgbled_adapter
+    shield: Ed1tor50 
     snippet: studio-rpc-usb-uart zmk-usb-logging
   - board: nrfmicro_13
     shield: settings_reset
