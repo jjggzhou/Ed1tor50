@@ -119,13 +119,6 @@
 		compatible = "zmk,input-listener";
 		device = <&anin0>;
 	};
-
-	EXT_POWER {
-	compatible = "zmk,ext-power-generic";
-	control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
-	init-delay-ms = <50>;
-    };
-	
 };
 
 &adc {
@@ -189,7 +182,7 @@
 		sampling-hz = <100>;
 
 		y-ch {
-			io-channels = <&adc 0>;
+			io-channels = <&adc 7>;
 			mv-mid = <1760>;
 			mv-min-max = <800>;
 			mv-deadzone = <100>;
@@ -200,7 +193,7 @@
 			report-on-change-only;
 		};
 		x-ch {
-			io-channels = <&adc 1>;
+			io-channels = <&adc 6>;
 			mv-mid = <1660>;
 			mv-min-max = <800>;
 			mv-deadzone = <100>;
