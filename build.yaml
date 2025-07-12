@@ -1,8 +1,8 @@
 include:
-  - board: seeeduino_xiao_ble
-    shield: Ed1tor50 rgbled_adapter
+  - board: nrfmicro_13
+    shield: Ed1tor50 
     snippet: studio-rpc-usb-uart zmk-usb-logging
-  - board: seeeduino_xiao_ble
+  - board: nrfmicro_13
     shield: settings_reset
 
 # name: Build ZMK firmware
