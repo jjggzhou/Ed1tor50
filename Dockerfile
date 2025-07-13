@@ -54,6 +54,9 @@ RUN west update
 ENV ZEPHYR_BASE=/workspace/zephyr
 ENV ZMK_DIR=/workspace/zmk
 
+# 验证west配置
+RUN west status
+
 # 设置构建脚本到系统路径
 RUN echo '#!/bin/bash\n\
 set -e\n\
@@ -75,6 +78,9 @@ BOARD=$1\n\
 SHIELD=${2:-""}\n\
 \n\
 echo "Building board: $BOARD"\n\
+echo "Current directory: $(pwd)"\n\
+\n\
+# Build firmware\n\
 if [ ! -z "$SHIELD" ]; then\n\
     echo "Using shield: $SHIELD"\n\
     west build -s zmk/app -b $BOARD -- -DSHIELD=$SHIELD\n\
@@ -82,8 +88,19 @@ else\n\
     west build -s zmk/app -b $BOARD\n\
 fi\n\
 \n\
-echo "Build completed! Firmware file located at: build/zephyr/zmk.uf2"\n\
+# Copy firmware files to project root\n\
+if [ -f "build/zephyr/zmk.uf2" ]; then\n\
+    echo "Copying firmware files to project root..."\n\
+    cp build/zephyr/zmk.uf2 /workspace/\n\
+    cp build/zephyr/zmk.hex /workspace/ 2>/dev/null || true\n\
+    cp build/zephyr/zmk.bin /workspace/ 2>/dev/null || true\n\
+    echo "Build completed! Firmware files copied to project root:"\n\
+    ls -la /workspace/*.uf2 /workspace/*.hex /workspace/*.bin 2>/dev/null || true\n\
+else\n\
+    echo "Build failed - firmware file not found"\n\
+    exit 1\n\
+fi\n\
 ' > /usr/local/bin/build.sh && chmod +x /usr/local/bin/build.sh
 
-# 设置入口点
-ENTRYPOINT ["/usr/local/bin/build.sh"] 
+# 设置默认命令
+CMD ["/usr/local/bin/build.sh"] 

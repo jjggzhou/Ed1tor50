@@ -26,6 +26,9 @@ echo "  板卡: $BOARD"
 echo "  Shield: $SHIELD"
 echo ""
 
+# 创建输出目录
+mkdir -p firmwares
+
 # 构建Docker镜像
 echo "正在构建Docker镜像..."
 docker-compose build
@@ -34,7 +37,25 @@ docker-compose build
 echo "开始构建固件..."
 docker-compose run --rm zmk-build $BOARD $SHIELD
 
-echo ""
-echo "=== 构建完成 ==="
-echo "固件文件应该位于: build/zephyr/zmk.uf2"
-echo "如果构建成功，您可以将zmk.uf2文件复制到键盘进行刷写" 
+# 检查构建结果
+if [ -f "zmk.uf2" ]; then
+    echo ""
+    echo "=== 构建成功 ==="
+    echo "固件文件已保存到项目根目录:"
+    ls -la *.uf2 *.hex *.bin 2>/dev/null || true
+    
+    # 复制到firmwares目录
+    echo ""
+    echo "正在复制固件到firmwares目录..."
+    cp *.uf2 firmwares/ 2>/dev/null || true
+    cp *.hex firmwares/ 2>/dev/null || true
+    cp *.bin firmwares/ 2>/dev/null || true
+    
+    echo "固件文件已保存到:"
+    ls -la firmwares/
+else
+    echo ""
+    echo "=== 构建失败 ==="
+    echo "未找到固件文件，请检查构建日志"
+    exit 1
+fi 
