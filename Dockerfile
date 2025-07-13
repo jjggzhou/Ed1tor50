@@ -3,8 +3,6 @@ FROM ubuntu:22.04
 
 # 设置环境变量
 ENV DEBIAN_FRONTEND=noninteractive
-ENV ZEPHYR_BASE=/workspace/zephyr
-ENV ZMK_DIR=/workspace/zmk
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
@@ -54,10 +52,7 @@ RUN west update
 ENV ZEPHYR_BASE=/workspace/zephyr
 ENV ZMK_DIR=/workspace/zmk
 
-# 验证west配置
-RUN west status
-
-# 设置构建脚本到系统路径
+# 设置构建脚本
 RUN echo '#!/bin/bash\n\
 set -e\n\
 \n\
@@ -89,15 +84,41 @@ else\n\
 fi\n\
 \n\
 # Copy firmware files to project root\n\
+echo "Checking for firmware files..."\n\
+ls -la build/zephyr/ 2>/dev/null || echo "build/zephyr/ directory not found"\n\
+\n\
 if [ -f "build/zephyr/zmk.uf2" ]; then\n\
     echo "Copying firmware files to project root..."\n\
-    cp build/zephyr/zmk.uf2 /workspace/\n\
-    cp build/zephyr/zmk.hex /workspace/ 2>/dev/null || true\n\
-    cp build/zephyr/zmk.bin /workspace/ 2>/dev/null || true\n\
+    # 确保目标目录存在\n\
+    mkdir -p /workspace\n\
+    # 复制文件并显示详细信息\n\
+    echo "Copying zmk.uf2..."\n\
+    cp -v build/zephyr/zmk.uf2 /workspace/\n\
+    \n\
+    if [ -f "build/zephyr/zmk.hex" ]; then\n\
+        echo "Copying zmk.hex..."\n\
+        cp -v build/zephyr/zmk.hex /workspace/\n\
+    else\n\
+        echo "No .hex file found"\n\
+    fi\n\
+    \n\
+    if [ -f "build/zephyr/zmk.bin" ]; then\n\
+        echo "Copying zmk.bin..."\n\
+        cp -v build/zephyr/zmk.bin /workspace/\n\
+    else\n\
+        echo "No .bin file found"\n\
+    fi\n\
+    \n\
     echo "Build completed! Firmware files copied to project root:"\n\
-    ls -la /workspace/*.uf2 /workspace/*.hex /workspace/*.bin 2>/dev/null || true\n\
+    ls -la /workspace/*.uf2 /workspace/*.hex /workspace/*.bin 2>/dev/null || echo "No firmware files found in /workspace"\n\
+    echo "Current directory contents:"\n\
+    ls -la /workspace/\n\
 else\n\
-    echo "Build failed - firmware file not found"\n\
+    echo "Build failed - firmware file not found at build/zephyr/zmk.uf2"\n\
+    echo "Available files in build/zephyr/:"\n\
+    ls -la build/zephyr/ 2>/dev/null || echo "build/zephyr/ directory not found"\n\
+    echo "Current directory contents:"\n\
+    ls -la\n\
     exit 1\n\
 fi\n\
 ' > /usr/local/bin/build.sh && chmod +x /usr/local/bin/build.sh
