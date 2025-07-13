@@ -15,6 +15,7 @@
     transform = <&matrix_transform>;
 };
 
+
 / {
     chosen {
         zmk,kscan = &kscan0;
