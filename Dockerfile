@@ -50,11 +50,19 @@ COPY build.yaml ./
 RUN west init -l config
 RUN west update
 
+# 设置Zephyr环境变量
+ENV ZEPHYR_BASE=/workspace/zephyr
+ENV ZMK_DIR=/workspace/zmk
+
 # 设置构建脚本到系统路径
 RUN echo '#!/bin/bash\n\
 set -e\n\
 \n\
 echo "Starting ZMK firmware build..."\n\
+\n\
+# Set up environment\n\
+export ZEPHYR_BASE=/workspace/zephyr\n\
+export ZMK_DIR=/workspace/zmk\n\
 \n\
 # Check parameters\n\
 if [ -z "$1" ]; then\n\
