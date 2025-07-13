@@ -47,7 +47,7 @@ if errorlevel 1 (
 
 REM 运行构建
 echo 开始构建固件...
-docker-compose run --rm zmk-build %BOARD% %SHIELD%
+docker-compose run --rm builder /usr/local/bin/build.sh %BOARD% %SHIELD%
 if errorlevel 1 (
     echo 构建固件失败
     pause
@@ -55,21 +55,11 @@ if errorlevel 1 (
 )
 
 REM 检查构建结果
-if exist zmk.uf2 (
+if exist firmwares\zmk.uf2 (
     echo.
     echo === 构建成功 ===
-    echo 固件文件已保存到项目根目录:
-    dir *.uf2 *.hex *.bin 2>nul
-    
-    REM 复制到firmwares目录
-    echo.
-    echo 正在复制固件到firmwares目录...
-    copy *.uf2 firmwares\ 2>nul
-    copy *.hex firmwares\ 2>nul
-    copy *.bin firmwares\ 2>nul
-    
-    echo 固件文件已保存到:
-    dir firmwares\
+    echo 固件文件已保存到firmwares目录:
+    dir firmwares\*.uf2 firmwares\*.hex firmwares\*.bin 2>nul
 ) else (
     echo.
     echo === 构建失败 ===

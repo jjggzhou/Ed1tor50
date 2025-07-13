@@ -47,6 +47,7 @@ COPY build.yaml ./
 # 初始化Zephyr环境
 RUN west init -l config
 RUN west update
+RUN west status
 
 # 设置Zephyr环境变量
 ENV ZEPHYR_BASE=/workspace/zephyr
@@ -75,6 +76,11 @@ SHIELD=${2:-""}\n\
 echo "Building board: $BOARD"\n\
 echo "Current directory: $(pwd)"\n\
 \n\
+# Fix west environment\n\
+echo "Fixing west environment..."\n\
+west update\n\
+west status\n\
+\n\
 # Build firmware\n\
 if [ ! -z "$SHIELD" ]; then\n\
     echo "Using shield: $SHIELD"\n\
@@ -83,42 +89,38 @@ else\n\
     west build -s zmk/app -b $BOARD\n\
 fi\n\
 \n\
-# Copy firmware files to project root\n\
+# Copy firmware files to output directory\n\
 echo "Checking for firmware files..."\n\
 ls -la build/zephyr/ 2>/dev/null || echo "build/zephyr/ directory not found"\n\
 \n\
 if [ -f "build/zephyr/zmk.uf2" ]; then\n\
-    echo "Copying firmware files to project root..."\n\
-    # 确保目标目录存在\n\
-    mkdir -p /workspace\n\
+    echo "Copying firmware files to output directory..."\n\
+    # 确保输出目录存在\n\
+    mkdir -p /workspace/output\n\
     # 复制文件并显示详细信息\n\
     echo "Copying zmk.uf2..."\n\
-    cp -v build/zephyr/zmk.uf2 /workspace/\n\
+    cp -v build/zephyr/zmk.uf2 /workspace/output/\n\
     \n\
     if [ -f "build/zephyr/zmk.hex" ]; then\n\
         echo "Copying zmk.hex..."\n\
-        cp -v build/zephyr/zmk.hex /workspace/\n\
+        cp -v build/zephyr/zmk.hex /workspace/output/\n\
     else\n\
         echo "No .hex file found"\n\
     fi\n\
     \n\
     if [ -f "build/zephyr/zmk.bin" ]; then\n\
         echo "Copying zmk.bin..."\n\
-        cp -v build/zephyr/zmk.bin /workspace/\n\
+        cp -v build/zephyr/zmk.bin /workspace/output/\n\
     else\n\
         echo "No .bin file found"\n\
     fi\n\
     \n\
-    echo "Build completed! Firmware files copied to project root:"\n\
-    ls -la /workspace/*.uf2 /workspace/*.hex /workspace/*.bin 2>/dev/null || echo "No firmware files found in /workspace"\n\
-    echo "Current directory contents:"\n\
-    ls -la /workspace/\n\
+    echo "Build completed! Firmware files copied to output directory:"\n\
+    ls -la /workspace/output/*.uf2 /workspace/output/*.hex /workspace/output/*.bin 2>/dev/null || echo "No firmware files found in output directory"\n\
 else\n\
     echo "Build failed - firmware file not found at build/zephyr/zmk.uf2"\n\
     echo "Available files in build/zephyr/:"\n\
     ls -la build/zephyr/ 2>/dev/null || echo "build/zephyr/ directory not found"\n\
-    echo "Current directory contents:"\n\
-    ls -la\n\
     exit 1\n\
 fi\n\
 ' > /usr/local/bin/build.sh && chmod +x /usr/local/bin/build.sh

@@ -35,24 +35,14 @@ docker-compose build
 
 # 运行构建
 echo "开始构建固件..."
-docker-compose run --rm zmk-build $BOARD $SHIELD
+docker-compose run --rm builder /usr/local/bin/build.sh $BOARD $SHIELD
 
 # 检查构建结果
-if [ -f "zmk.uf2" ]; then
+if [ -f "firmwares/zmk.uf2" ]; then
     echo ""
     echo "=== 构建成功 ==="
-    echo "固件文件已保存到项目根目录:"
-    ls -la *.uf2 *.hex *.bin 2>/dev/null || true
-    
-    # 复制到firmwares目录
-    echo ""
-    echo "正在复制固件到firmwares目录..."
-    cp *.uf2 firmwares/ 2>/dev/null || true
-    cp *.hex firmwares/ 2>/dev/null || true
-    cp *.bin firmwares/ 2>/dev/null || true
-    
-    echo "固件文件已保存到:"
-    ls -la firmwares/
+    echo "固件文件已保存到firmwares目录:"
+    ls -la firmwares/*.uf2 firmwares/*.hex firmwares/*.bin 2>/dev/null || true
 else
     echo ""
     echo "=== 构建失败 ==="
