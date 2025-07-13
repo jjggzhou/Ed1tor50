@@ -12,7 +12,7 @@ services:
     environment:
       - ZEPHYR_BASE=/workspace/zephyr
       - ZMK_DIR=/workspace/zmk
-    command: ["nice_nano_v2", "Ed1tor50"]
+    command: ["nrfmicro_13", "Ed1tor50"]
     # 如果需要交互式shell，可以注释掉command行并取消注释下面这行
     # stdin_open: true
     # tty: true

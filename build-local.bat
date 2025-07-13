@@ -22,7 +22,7 @@ if errorlevel 1 (
 
 REM 默认参数
 set BOARD=%1
-if "%BOARD%"=="" set BOARD=nice_nano_v2
+if "%BOARD%"=="" set BOARD=nrfmicro_13
 
 set SHIELD=%2
 if "%SHIELD%"=="" set SHIELD=Ed1tor50

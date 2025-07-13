@@ -22,7 +22,7 @@
 ./build-local.sh
 
 # 或者指定板卡和shield
-./build-local.sh nice_nano_v2 Ed1tor50
+./build-local.sh nrfmicro_13 Ed1tor50
 ```
 
 ### 方法2: 使用docker-compose
@@ -32,7 +32,7 @@
 docker-compose build
 
 # 运行构建
-docker-compose run --rm zmk-build nice_nano_v2 Ed1tor50
+docker-compose run --rm zmk-build nrfmicro_13 Ed1tor50
 ```
 
 ### 方法3: 直接使用Docker
@@ -42,12 +42,12 @@ docker-compose run --rm zmk-build nice_nano_v2 Ed1tor50
 docker build -t zmk-builder .
 
 # 运行构建
-docker run --rm -v $(pwd):/workspace zmk-builder nice_nano_v2 Ed1tor50
+docker run --rm -v $(pwd):/workspace zmk-builder nrfmicro_13 Ed1tor50
 ```
 
 ## 构建参数
 
-- `BOARD`: 目标板卡（默认: nice_nano_v2）
+- `BOARD`: 目标板卡（默认: nrfmicro_13）
 - `SHIELD`: 键盘shield（默认: Ed1tor50）
 
 ## 输出文件
@@ -89,7 +89,7 @@ docker-compose run --rm -it zmk-build bash
 ```bash
 # 在容器内手动执行构建命令
 docker run --rm -v $(pwd):/workspace zmk-builder bash -c "
-west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=Ed1tor50
+west build -s zmk/app -b nrfmicro_13 -- -DSHIELD=Ed1tor50
 "
 ```
 

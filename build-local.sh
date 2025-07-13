@@ -18,7 +18,7 @@ if ! command -v docker-compose &> /dev/null; then
 fi
 
 # 默认参数
-BOARD=${1:-"nice_nano_v2"}
+BOARD=${1:-"nrfmicro_13"}
 SHIELD=${2:-"Ed1tor50"}
 
 echo "构建参数:"
