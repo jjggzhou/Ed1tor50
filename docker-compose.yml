@@ -1,24 +1,13 @@
 services:
   builder:
-    build: .
+    image: zmkfirmware/zmk-dev-arm:stable
     volumes:
-      # 只挂载配置文件，不挂载整个项目目录
-      - ./config:/workspace/config:ro
-      - ./build.yaml:/workspace/build.yaml:ro
-      # 挂载构建缓存
-      - zmk-cache:/workspace/.west
-      - ccache:/root/.ccache
-      # 挂载输出目录用于复制固件
-      - ./firmwares:/workspace/output
-    environment:
-      - ZEPHYR_BASE=/workspace/zephyr
-      - ZMK_DIR=/workspace/zmk
-      - LANG=C.UTF-8
-      - LC_ALL=C.UTF-8
-      - PYTHONIOENCODING=utf-8
-    stdin_open: true
+      # Bind-mount entire repo
+      - ../:/workspaces/zmk:rw
+    working_dir: /workspaces/zmk
+    entrypoint: []
+    command:
+      - bash
+      - ./local-build/build_setup.sh
     tty: true
-
-volumes:
-  zmk-cache:
-  ccache: 
+    stdin_open: true
