@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  zmk-build:
+    build: .
+    volumes:
+      # 挂载当前目录到容器
+      - .:/workspace
+      # 挂载构建缓存
+      - zmk-cache:/workspace/.west
+      - ccache:/root/.ccache
+    environment:
+      - ZEPHYR_BASE=/workspace/zephyr
+      - ZMK_DIR=/workspace/zmk
+    command: ["nice_nano_v2", "Ed1tor50"]
+    # 如果需要交互式shell，可以注释掉command行并取消注释下面这行
+    # stdin_open: true
+    # tty: true
+
+volumes:
+  zmk-cache:
+  ccache: 
