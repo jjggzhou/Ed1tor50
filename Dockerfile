@@ -50,7 +50,7 @@ COPY build.yaml ./
 RUN west init -l config
 RUN west update
 
-# 设置构建脚本
+# 设置构建脚本到系统路径
 RUN echo '#!/bin/bash\n\
 set -e\n\
 \n\
@@ -75,7 +75,7 @@ else\n\
 fi\n\
 \n\
 echo "Build completed! Firmware file located at: build/zephyr/zmk.uf2"\n\
-' > /workspace/build.sh && chmod +x /workspace/build.sh
+' > /usr/local/bin/build.sh && chmod +x /usr/local/bin/build.sh
 
 # 设置入口点
-ENTRYPOINT ["/workspace/build.sh"] 
+ENTRYPOINT ["/usr/local/bin/build.sh"] 
