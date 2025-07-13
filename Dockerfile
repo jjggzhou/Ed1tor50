@@ -5,6 +5,8 @@ FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
 ENV ZEPHYR_BASE=/workspace/zephyr
 ENV ZMK_DIR=/workspace/zmk
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
 
 # 安装必要的依赖
 RUN apt-get update && apt-get install -y \
@@ -27,7 +29,11 @@ RUN apt-get update && apt-get install -y \
     libffi-dev \
     pkg-config \
     libusb-1.0-0-dev \
+    locales \
     && rm -rf /var/lib/apt/lists/*
+
+# 设置locale
+RUN locale-gen en_US.UTF-8
 
 # 安装Python依赖
 RUN pip3 install --upgrade pip setuptools wheel
@@ -48,27 +54,27 @@ RUN west update
 RUN echo '#!/bin/bash\n\
 set -e\n\
 \n\
-echo "开始构建ZMK固件..."\n\
+echo "Starting ZMK firmware build..."\n\
 \n\
-# 检查参数\n\
+# Check parameters\n\
 if [ -z "$1" ]; then\n\
-    echo "用法: $0 <board> [shield]"\n\
-    echo "例如: $0 nice_nano_v2 Ed1tor50"\n\
+    echo "Usage: $0 <board> [shield]"\n\
+    echo "Example: $0 nrfmicro_13 Ed1tor50"\n\
     exit 1\n\
 fi\n\
 \n\
 BOARD=$1\n\
 SHIELD=${2:-""}\n\
 \n\
-echo "构建板卡: $BOARD"\n\
+echo "Building board: $BOARD"\n\
 if [ ! -z "$SHIELD" ]; then\n\
-    echo "使用shield: $SHIELD"\n\
+    echo "Using shield: $SHIELD"\n\
     west build -s zmk/app -b $BOARD -- -DSHIELD=$SHIELD\n\
 else\n\
     west build -s zmk/app -b $BOARD\n\
 fi\n\
 \n\
-echo "构建完成！固件文件位于: build/zephyr/zmk.uf2"\n\
+echo "Build completed! Firmware file located at: build/zephyr/zmk.uf2"\n\
 ' > /workspace/build.sh && chmod +x /workspace/build.sh
 
 # 设置入口点

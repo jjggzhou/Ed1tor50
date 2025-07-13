@@ -12,6 +12,9 @@ services:
     environment:
       - ZEPHYR_BASE=/workspace/zephyr
       - ZMK_DIR=/workspace/zmk
+      - LANG=C.UTF-8
+      - LC_ALL=C.UTF-8
+      - PYTHONIOENCODING=utf-8
     command: ["nrfmicro_13", "Ed1tor50"]
     # 如果需要交互式shell，可以注释掉command行并取消注释下面这行
     # stdin_open: true

@@ -1,4 +1,5 @@
 @echo off
+chcp 65001 >nul
 REM ZMK本地Docker构建脚本 (Windows版本)
 setlocal enabledelayedexpansion
 
