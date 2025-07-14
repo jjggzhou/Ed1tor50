@@ -100,7 +100,7 @@
 	kscan1_binding {
 		compatible = "zmk,kscan-gpio-direct-bindings";
 		input-devices = <&kscan1>;
-		bindings = <&mkp MCLK>;
+		bindings = <&kp C>;  // Changed from MCLK to C as a basic key code
 	};
 	
 };
