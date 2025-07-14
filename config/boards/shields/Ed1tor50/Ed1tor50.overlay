@@ -67,8 +67,7 @@
 		compatible = "zmk,kscan-gpio-direct";
 		wakeup-source;
 		toggle-mode;
-		input-gpios = <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>
-		;
+		input-gpios = <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 	};
 
 	left_encoder: encoder_left {
@@ -96,6 +95,12 @@
 	joystick_listener {
 		compatible = "zmk,input-listener";
 		device = <&anin0>;
+	};
+
+	kscan1_binding {
+		compatible = "zmk,binding";
+		input-devices = <&kscan1>;
+		bindings = <&mkp MCLK>;
 	};
 	
 };
