@@ -98,7 +98,7 @@
 	};
 
 	kscan1_binding {
-		compatible = "zmk,binding";
+		compatible = "zmk,kscan-gpio-direct-bindings";
 		input-devices = <&kscan1>;
 		bindings = <&mkp MCLK>;
 	};
