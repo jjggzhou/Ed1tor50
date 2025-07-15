@@ -97,13 +97,15 @@
 		device = <&anin0>;
 	};
 
-	kscan1_binding {
-		compatible = "zmk,kscan-gpio-direct-bindings";
-		input-devices = <&kscan1>;
-		bindings = <&kp C>;  // Changed from MCLK to C as a basic key code
-	};
-	
 };
+
+   &vbatt{
+        compatible = "zmk,battery-voltage-divider";
+        io-channels = <&adc 2>;
+        output-ohms = <5000000>;
+        full-ohms = <(5000000 + 820000)>;
+    };
+
 
 &adc {
     status = "okay";
