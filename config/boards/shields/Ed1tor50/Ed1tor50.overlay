@@ -166,7 +166,7 @@
 
 		x-ch {
 			io-channels = <&adc 7>;
-			mv-mid = <1760>;
+			mv-mid = <1700>;
 			mv-min-max = <800>;
 			mv-deadzone = <20>;
 			scale-multiplier = <1>;
@@ -177,7 +177,7 @@
 		};
 		y-ch {
 			io-channels = <&adc 6>;
-			mv-mid = <1710>;
+			mv-mid = <1760>;
 			mv-min-max = <800>;
 			mv-deadzone = <20>;
 			scale-multiplier = <1>;
