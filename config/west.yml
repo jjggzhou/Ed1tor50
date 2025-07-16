@@ -15,7 +15,6 @@ manifest:
       import: app/west.yml
     - name: zmk-analog-input-driver
       remote: jjggzhou
-      revision: 1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t  # Replace with a known good commit hash
     - name: zmk-auto-layer
       remote: urob
       revision: main
