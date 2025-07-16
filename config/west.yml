@@ -15,6 +15,7 @@ manifest:
       import: app/west.yml
     - name: zmk-analog-input-driver
       remote: jjggzhou
+      revision: main
     - name: zmk-auto-layer
       remote: urob
       revision: main
