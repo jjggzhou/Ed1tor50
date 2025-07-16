@@ -165,8 +165,8 @@
 		sampling-hz = <100>;
 
 		y-ch {
-			io-channels = <&adc 7>;
-			mv-mid = <1760>;
+			io-channels = <&adc 6>;
+			mv-mid = <1660>;
 			mv-min-max = <800>;
 			mv-deadzone = <100>;
 			scale-multiplier = <1>;
@@ -176,7 +176,7 @@
 			report-on-change-only;
 		};
 		x-ch {
-			io-channels = <&adc 6>;
+			io-channels = <&adc 7>;
 			mv-mid = <1660>;
 			mv-min-max = <800>;
 			mv-deadzone = <100>;
