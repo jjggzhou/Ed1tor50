@@ -95,6 +95,7 @@
 	joystick_listener {
 		compatible = "zmk,input-listener";
 		device = <&anin0>;
+        wakeup-source;	
 	};
 
 };
