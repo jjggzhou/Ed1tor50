@@ -10,7 +10,7 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: jjggzhou
-      remote: zmkfirmware
+      remote: zmk
       revision: main
       import: app/west.yml
     - name: zmk-analog-input-driver
