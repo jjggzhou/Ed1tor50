@@ -350,10 +350,10 @@
       #binding-cells = <1>;
       bindings = <&macro_param_1to1>,
         <&macro_param_1to1>,
-        <&macro_press &ext_power EP_ON>,
+        <&macro_press &ext_power_4ch ext_power_4ch_ch0_on>,
         <&macro_pause_for_release>,
         <&macro_param_1to1>,
-        <&macro_release &ext_power EP_OFF>;
+        <&macro_release &ext_power_4ch ext_power_4ch_ch0_on>;
     };
 
     }; 
