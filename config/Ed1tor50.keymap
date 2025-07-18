@@ -14,7 +14,6 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/ext_power_4ch.dtsi>
 
 
@@ -350,10 +349,10 @@
       #binding-cells = <0>;
       bindings = 
         <&macro_press>,
-        <&macro_tap &ext_power_4ch_ch0_on>,
+        <&macro_tap &ext_power_4ch EXT_POWER_4CH_CH0_ON>,
         <&macro_pause_for_release>,
         <&macro_release>,
-        <&macro_tap &ext_power_4ch_ch0_off>;
+        <&macro_tap &ext_power_4ch EXT_POWER_4CH_CH0_OFF>;
     };
 
       onoffext1: onoff_ext1 {
@@ -363,10 +362,10 @@
       #binding-cells = <0>;
       bindings = 
         <&macro_press>,
-        <&macro_tap &ext_power_4ch_ch1_on>,
+        <&macro_tap &ext_power_4ch EXT_POWER_4CH_CH1_ON>,
         <&macro_pause_for_release>,
         <&macro_release>,
-        <&macro_tap &ext_power_4ch_ch0_off>;
+        <&macro_tap &ext_power_4ch EXT_POWER_4CH_CH1_OFF>;
     };
 
     }; 
