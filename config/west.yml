@@ -16,6 +16,9 @@ manifest:
     - name: zmk-analog-input-driver
       remote: jjggzhou
       revision: main
+    - name: zmk-ext-power-4ch
+      remote: jjggzhou
+      revision: main
     - name: zmk-auto-layer
       remote: urob
       revision: main
