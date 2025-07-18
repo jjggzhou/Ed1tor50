@@ -84,24 +84,20 @@
 	};
 
     ext_power_4ch: ext_power_4ch {
-    compatible = "zmk,ext-power-4ch";
-    label = "EXT_POWER_4CH";
-    status = "okay";
-    
-    // 配置4个通道的GPIO引脚
-    channel0-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;  // 替换为实际使用的GPIO引脚
-    channel1-gpios = <&gpio0 7 GPIO_ACTIVE_HIGH>;
-    channel2-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
-    channel3-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
-    
-    // 初始状态 (0 = 关闭, 1 = 开启)
-    channel0-initial-state = <0>;
-    channel1-initial-state = <0>;
-    channel2-initial-state = <0>;
-    channel3-initial-state = <0>;
-};
+        compatible = "zmk,ext-power-4ch";
+        status = "okay";
+        
+        // 配置4个通道的GPIO引脚
+        channel0-gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>;  // 替换为你的GPIO引脚
+        channel1-gpios = <&gpio0 29 GPIO_ACTIVE_HIGH>;
+        channel2-gpios = <&gpio0 26 GPIO_ACTIVE_HIGH>;
+        channel3-gpios = <&gpio0 06 GPIO_ACTIVE_HIGH>;
+        
+        init-delay-ms = <50>;
+    };
 
 };
+
 
 
 &adc {
