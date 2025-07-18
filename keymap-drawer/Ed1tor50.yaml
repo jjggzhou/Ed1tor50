@@ -40,7 +40,7 @@ layers:
   - {t: ;, s: ':'}
   - {t: Fn, h: '$$mdi:close-box$$'}
   - $$mdi:keyboard-esc$$
-  - $$mdi:keyboard-esc$$
+  - '&onoffext'
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
