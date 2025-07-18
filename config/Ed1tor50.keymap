@@ -348,9 +348,11 @@
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings =
-        <&macro_press &ext_power EP_ON>,
+        <&macro_tap &ext_power EP_ON>,
         <&macro_pause_for_release>,
-        <&macro_release &ext_power EP_OFF>;
+        <&macro_release>;
+        <&macro_tap>,
+        <&ext_power EP_OFF>;
     };
 
     }; 
