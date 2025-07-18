@@ -9,6 +9,7 @@
 #include <input/processors.dtsi>
 #include "Ed1tor50-layouts.dtsi"
 #include <dt-bindings/led/led.h>
+#include <dt-bindings/zmk/ext_power_4ch.dtsi>
 
 
 &physical_layout0 {
