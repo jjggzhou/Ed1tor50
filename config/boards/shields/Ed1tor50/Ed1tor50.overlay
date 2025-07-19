@@ -97,6 +97,16 @@
 		device = <&anin0>;
 	};
 
+    ext_power1: ext_power1 {
+        compatible = "zmk,ext-power-generic";
+        gpios = <&gpio1 11 (GPIO_ACTIVE_LOW)>;
+    };
+
+    ext_power2: ext_power2 {
+        compatible = "zmk,ext-power-generic";
+        gpios = <&gpio0 29 (GPIO_ACTIVE_LOW)>;
+    };
+
 };
 
 

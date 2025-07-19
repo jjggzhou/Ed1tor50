@@ -342,17 +342,30 @@
               <&rgb_ug RGB_TOG>;
       };
 
-    onoffext: onoff_ext {
+    onoffext1: onoff_ext1 {
       wait-ms = <0>;
       tap-ms = <0>;
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings =
         <&macro_press>,
-        <&macro_tap &ext_power EP_ON>,
+        <&macro_tap &ext_power1 EP_ON>,
         <&macro_pause_for_release>,
         <&macro_release>,
-        <&macro_tap &ext_power EP_OFF>;
+        <&macro_tap &ext_power1 EP_OFF>;
+    };
+
+    onoffext2: onoff_ext2 {
+      wait-ms = <0>;
+      tap-ms = <0>;
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings =
+        <&macro_press>,
+        <&macro_tap &ext_power2 EP_ON>,
+        <&macro_pause_for_release>,
+        <&macro_release>,
+        <&macro_tap &ext_power2 EP_OFF>;
     };
 
     }; 
@@ -407,7 +420,7 @@
 /**
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤                                   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                 │36             │37             │38             │                                   │39             │40             │41             │*/
-    &kp ESC         &onoffext                         &kp TAB         &mt LSHFT SPACE &smart_num L2 0              &mkp MB4               &smart_num L2 0 &smart_shift    &kp GRAVE                       &kp ESC         &kp ESC
+    &kp ESC         &onoffext1                         &kp TAB         &mt LSHFT SPACE &smart_num L2 0              &mkp MB4               &smart_num L2 0 &smart_shift    &kp GRAVE                       &onoffext2         &kp ESC
 
 /**
 //                                                 ╰───────────────┴───────────────┴───────────────╯                                   ╰───────────────┴───────────────┴───────────────╯*/
