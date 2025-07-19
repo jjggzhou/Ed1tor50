@@ -69,14 +69,7 @@
 
     qwerty_layer {
       display-name = "L1";
-      bindings = <
-
- &onoffext0 &onoffext1
-
-/**
-//                                                 ╰───────────────┴───────────────┴───────────────╯                                   ╰───────────────┴───────────────┴───────────────╯*/
-      >;
-      sensor-bindings = <&rgb_encoder>, <&volknob>;
+      bindings = < &onoffext0 &onoffext1 >;
     };
 
 
