@@ -99,6 +99,7 @@
 
     ext_power1: ext_power1 {
         compatible = "zmk,ext-power-generic";
+        #binding-cells = <0>;
         control-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW)>;
         label = "EXT1"; 
         status = "okay";
@@ -106,10 +107,12 @@
 
     ext_power2: ext_power2 {
         compatible = "zmk,ext-power-generic";
+        #binding-cells = <0>;
         control-gpios = <&gpio0 29 (GPIO_ACTIVE_LOW)>;
         label = "EXT2"; 
         status = "okay";
     };
+
 
 };
 
