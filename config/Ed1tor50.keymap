@@ -350,10 +350,10 @@
       #binding-cells = <0>;
       bindings = 
         <&macro_press>,
-        <&macro_tap &ext_power_4ch 0x01>,  /* CH0 ON */
+        <&macro_tap &ext_power_4ch EP4CH_CH0_ON>,  /* CH0 ON */
         <&macro_pause_for_release>,
         <&macro_release>,
-        <&macro_tap &ext_power_4ch 0x00>;  /* CH0 OFF */
+        <&macro_tap &ext_power_4ch EP4CH_CH0_OFF>;  /* CH0 OFF */
     };
 
       onoffext1: onoff_ext1 {
@@ -363,10 +363,10 @@
       #binding-cells = <0>;
       bindings = 
         <&macro_press>,
-        <&macro_tap &ext_power_4ch 0x05>,  /* CH1 ON */
+        <&macro_tap &ext_power_4ch EP4CH_CH1_ON>,  /* CH1 ON */
         <&macro_pause_for_release>,
         <&macro_release>,
-        <&macro_tap &ext_power_4ch 0x04>;  /* CH1 OFF */
+        <&macro_tap &ext_power_4ch EP4CH_CH1_OFF>;  /* CH1 OFF */
     };
 
     }; 
