@@ -150,36 +150,38 @@
 		compatible = "zmk,analog-input";
 		sampling-hz = <100>;
 
-            // Calibration settings
-        calibration {
-            samples = <10>;           // Samples per calibration
-            retries = <3>;           // Max retry attempts
-            variance-threshold = <50>; // Max allowed variance (mV)
-            auto-save = <1>;         // Auto-save to storage
-        };
-
-		x-ch {
-			io-channels = <&adc 7>;
-			mv-mid = <32767>;
-			mv-min-max = <800>;
-			mv-deadzone = <50>;
-			scale-multiplier = <1>;
-			scale-divisor = <6>;
-			evt-type = <INPUT_EV_REL>;
-			input-code = <INPUT_REL_X>;
-			report-on-change-only;
-		};
-		y-ch {
-			io-channels = <&adc 6>;
-			mv-mid = <32767>;
-			mv-min-max = <800>;
-			mv-deadzone = <50>;
-			scale-multiplier = <1>;
-			scale-divisor = <6>;
-			evt-type = <INPUT_EV_REL>;
-			input-code = <INPUT_REL_Y>;
-			report-on-change-only;
-		};
+  x-ch {
+   io-channels = <&adc 7>;
+   mv-mid = <32767>;
+   mv-min-max = <800>;
+   mv-deadzone = <50>;
+   scale-multiplier = <1>;
+   scale-divisor = <6>;
+   evt-type = <INPUT_EV_REL>;
+   input-code = <INPUT_REL_X>;
+   report-on-change-only;
+   // Calibration settings
+   calibration-samples = <10>;
+   calibration-retries = <3>;
+   calibration-variance-threshold = <50>;
+   calibration-auto-save;
+  };
+  y-ch {
+   io-channels = <&adc 6>;
+   mv-mid = <32767>;
+   mv-min-max = <800>;
+   mv-deadzone = <50>;
+   scale-multiplier = <1>;
+   scale-divisor = <6>;
+   evt-type = <INPUT_EV_REL>;
+   input-code = <INPUT_REL_Y>;
+   report-on-change-only;
+   // Calibration settings
+   calibration-samples = <10>;
+   calibration-retries = <3>;
+   calibration-variance-threshold = <50>;
+   calibration-auto-save;
+  };
 	};
 };
 
