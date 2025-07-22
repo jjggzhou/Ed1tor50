@@ -97,21 +97,6 @@
 		device = <&anin0>;
 	};
 
-    ext_power1: EXT_POWER  {
-        compatible = "zmk,ext-power-generic";
-        control-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW)>;
-        label = "EXT1"; 
-        status = "okay";
-    };
-
-    ext_power2: EXT_POWER  {
-        compatible = "zmk,ext-power-generic";
-        control-gpios = <&gpio0 29 (GPIO_ACTIVE_LOW)>;
-        label = "EXT2"; 
-        status = "okay";
-    };
-
-
 };
 
 
@@ -165,9 +150,17 @@
 		compatible = "zmk,analog-input";
 		sampling-hz = <100>;
 
+            // Calibration settings
+        calibration {
+            samples = <10>;           // Samples per calibration
+            retries = <3>;           // Max retry attempts
+            variance-threshold = <50>; // Max allowed variance (mV)
+            auto-save = <1>;         // Auto-save to storage
+        };
+
 		x-ch {
 			io-channels = <&adc 7>;
-			mv-mid = <0x7FFF>;
+			mv-mid = <32767>;
 			mv-min-max = <800>;
 			mv-deadzone = <50>;
 			scale-multiplier = <1>;
@@ -178,7 +171,7 @@
 		};
 		y-ch {
 			io-channels = <&adc 6>;
-			mv-mid = <0x7FFF>;
+			mv-mid = <32767>;
 			mv-min-max = <800>;
 			mv-deadzone = <50>;
 			scale-multiplier = <1>;

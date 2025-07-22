@@ -197,6 +197,16 @@
         flavor = "tap-preferred";
         bindings = <&bootloader>, <&sys_reset>;
     };
+
+    /*
+    - tap: calibrate analog input device
+    - parameter: device index (0=first device, 255=all devices)
+    */
+    /omit-if-no-ref/ cal_stick: calibrate_analog_stick {
+        compatible = "zmk,behavior-analog-calibrate";
+        label = "CALIBRATE_STICK";
+        #binding-cells = <1>;
+    };
   };
 };
 
@@ -248,6 +258,9 @@
 
     /* Media */
     COMBO(play, &kp C_PP, 6 7, L1 L2 Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+
+    /* Analog Input Calibration */
+    COMBO(calibrate_stick, &cal_stick 0, 25 26 27, Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
   };
 };
 
@@ -342,32 +355,6 @@
               <&rgb_ug RGB_TOG>;
       };
 
-    onoffext1: onoff_ext1 {
-      wait-ms = <0>;
-      tap-ms = <0>;
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings =
-        <&macro_press>,
-        <&macro_tap &ext_power1 EP_ON>,
-        <&macro_pause_for_release>,
-        <&macro_release>,
-        <&macro_tap &ext_power1 EP_OFF>;
-    };
-
-    onoffext2: onoff_ext2 {
-      wait-ms = <0>;
-      tap-ms = <0>;
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings =
-        <&macro_press>,
-        <&macro_tap &ext_power2 EP_ON>,
-        <&macro_pause_for_release>,
-        <&macro_release>,
-        <&macro_tap &ext_power2 EP_OFF>;
-    };
-
     }; 
 
 }; 
@@ -459,7 +446,7 @@
     &rst_boot 0 0   &kp F6          &hrml LCTRL F7  &hrml LALT F8   &hrml LCMD F9   &hrml MEH F10                                       &trans          &trans          &trans          &trans          &trans          &rst_boot 0 0
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                                   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 // │24             │25             │26             │27             │28             │29             │                                   │30             │31             │32             │33             │34             │35             │
-    &cmo Fn         &kp F11         &kp F12         &kp F13         &kp F14         &kp F15         &mkp LCLK                &mkp RCLK  &trans          &trans          &trans          &trans          &trans          &cmo Fn
+    &cmo Fn         &kp F11         &kp F12         &cal_stick 0    &kp F14         &kp F15         &mkp LCLK                &mkp RCLK  &trans          &trans          &trans          &trans          &trans          &cmo Fn
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤                                   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                 │36             │37             │38             │                                   │39             │40             │41             │
     &trans          &trans                          &kp C_BRI_DN    &kp C_BRI_UP    &cmo L2                      &mkp MB4               &cmo L2         &kp CAPSLOCK    &trans                          &trans          &trans
