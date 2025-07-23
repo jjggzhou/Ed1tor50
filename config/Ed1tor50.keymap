@@ -204,7 +204,6 @@
     */
      /omit-if-no-ref/ cal_stick: calibrate_analog_stick {
          compatible = "zmk,behavior-analog-calibrate";
-         label = "CALIBRATE_STICK";
          #binding-cells = <1>;
      };
   };
