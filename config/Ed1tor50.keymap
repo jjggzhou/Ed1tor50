@@ -202,11 +202,11 @@
     - tap: calibrate analog input device
     - parameter: device index (0=first device, 255=all devices)
     */
-    // /omit-if-no-ref/ cal_stick: calibrate_analog_stick {
-    //     compatible = "zmk,behavior-analog-calibrate";
-    //     label = "CALIBRATE_STICK";
-    //     #binding-cells = <1>;
-    // };
+     /omit-if-no-ref/ cal_stick: calibrate_analog_stick {
+         compatible = "zmk,behavior-analog-calibrate";
+         label = "CALIBRATE_STICK";
+         #binding-cells = <1>;
+     };
   };
 };
 
@@ -407,7 +407,7 @@
 /**
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤                                   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                 │36             │37             │38             │                                   │39             │40             │41             │*/
-    &kp ESC         &kp ESC                          &kp TAB         &mt LSHFT SPACE &smart_num L2 0              &mkp MB4               &smart_num L2 0 &smart_shift    &kp GRAVE                       &kp ESC          &kp ESC
+    &kp ESC         &cal_stick 0                &kp TAB         &mt LSHFT SPACE &smart_num L2 0              &mkp MB4               &smart_num L2 0 &smart_shift    &kp GRAVE                       &kp ESC          &kp ESC
 
 /**
 //                                                 ╰───────────────┴───────────────┴───────────────╯                                   ╰───────────────┴───────────────┴───────────────╯*/
