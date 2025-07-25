@@ -15,6 +15,7 @@
 #include <dt-bindings/zmk_driver_animation/animation_control.h>
 #include <dt-bindings/zmk_driver_animation/animation_trigger.h>
 #include <behaviors/animation_trigger.dtsi>
+#include <behaviors/default_layer.dtsi>
 
 &physical_layout0 {
     transform = <&matrix_transform>;
@@ -114,7 +115,7 @@
 
      // Animation node which controls animation device.
     // LED device and pixel mapping is defined in it.
-    animation: animation {
+    animation:animation {
         compatible = "zmk,animation";
         drivers = <&led_strip>;
         pixels = <&pixel 0 0>,
