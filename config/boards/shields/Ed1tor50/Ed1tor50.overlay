@@ -205,11 +205,9 @@
     // ios white
     // linux orange
     colors = <
-        HSL(240, 100, 50)
+        0
         HSL(193, 100, 47)
         HSL(0, 100, 40)
-        HSL(0, 100, 100)
-        HSL(29, 88, 51)
     >;
 
 };
