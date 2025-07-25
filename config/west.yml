@@ -28,6 +28,9 @@ manifest:
     - name: zmk-driver-ext-power-transient
       remote: cormoran
       revision: main
+    - name: zmk-feature-default-layer
+      path: external/zmk-feature-default-layer
+      revision: main
   self:
     path: config
 

@@ -16,7 +16,6 @@
 #include <dt-bindings/zmk_driver_animation/animation_trigger.h>
 #include <behaviors/animation_trigger.dtsi>
 
-
 &physical_layout0 {
     transform = <&matrix_transform>;
 };
