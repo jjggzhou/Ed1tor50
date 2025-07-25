@@ -6,9 +6,8 @@ manifest:
       url-base: https://github.com/jjggzhou
     - name: urob
       url-base: https://github.com/urob
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
-  projects:
+    - name: cormoran
+      url-base: https://github.com/cormoran
     - name: zmk
       remote: jjggzhou
       revision: main
@@ -21,6 +20,12 @@ manifest:
       revision: main
     - name: zmk-tri-state
       remote: urob
+      revision: main
+    - name: zmk-driver-animation
+      remote: cormoran
+      revision: main
+    - name: zmk-driver-ext-power-transient
+      remote: cormoran
       revision: main
   self:
     path: config
