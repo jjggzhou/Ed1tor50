@@ -8,6 +8,7 @@ manifest:
       url-base: https://github.com/urob
     - name: cormoran
       url-base: https://github.com/cormoran
+  projects:
     - name: zmk
       remote: jjggzhou
       revision: main
