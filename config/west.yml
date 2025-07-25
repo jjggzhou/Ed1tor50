@@ -29,7 +29,7 @@ manifest:
       remote: cormoran
       revision: main
     - name: zmk-feature-default-layer
-      path: external/zmk-feature-default-layer
+      remote: cormoran
       revision: main
   self:
     path: config
