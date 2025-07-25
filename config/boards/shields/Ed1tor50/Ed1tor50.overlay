@@ -119,7 +119,7 @@
         compatible = "zmk,animation";
         drivers = <&led_strip>;
         pixels = <&pixel 0 0>,
-            <&pixel 1 0>,
+            <&pixel 1 0>;
         chain-lengths = <2>;
     };
 
