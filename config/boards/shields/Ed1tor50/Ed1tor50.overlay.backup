@@ -108,8 +108,6 @@
 		device = <&anin0>;
 	};
 
-    // Temporarily disabled animation nodes due to compatibility issues
-    /*
     led_power:led_power {
     compatible = "zmk,ext-power-transient";
     control-gpios = <&gpio1 9 (GPIO_ACTIVE_LOW)>;
@@ -192,15 +190,10 @@
         color-middle = <HSL(60, 100, 50)>; // yellow
         color-low = <HSL(0, 100, 50)>; // red
     };
-    };
-    */
-
 };
 
 
 
-// Temporarily disabled animation layer status due to compatibility issues
-/*
 // zmk,animation-layer-status is provided by #include <zmk_driver_animation/animation_layer_status.dtsi> (Why...? I completely forgot reason why only this node is pre-defined...)
 // Below code overwrites some fields to work nicely with https://github.com/cormoran/zmk-feature-default-layer
 &animation_layer_status {
@@ -218,8 +211,6 @@
     >;
 
 };
-*/
-
 
 
 &adc {

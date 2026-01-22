@@ -22,15 +22,16 @@ manifest:
     - name: zmk-tri-state
       remote: urob
       revision: main
-    - name: zmk-driver-animation
-      remote: cormoran
-      revision: main
-    - name: zmk-driver-ext-power-transient
-      remote: cormoran
-      revision: main
-    - name: zmk-feature-default-layer
-      remote: cormoran
-      revision: main
+    # Temporarily disabled animation drivers due to compatibility issues
+    # - name: zmk-driver-animation
+    #   remote: cormoran
+    #   revision: main
+    # - name: zmk-driver-ext-power-transient
+    #   remote: cormoran
+    #   revision: main
+    # - name: zmk-feature-default-layer
+    #   remote: cormoran
+    #   revision: main
   self:
     path: config
 
