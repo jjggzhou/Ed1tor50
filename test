@@ -1,0 +1,2 @@
+west build -b nrfmicro_13 -- -DSHIELD=Ed1tor50   -DZMK_CONFIG="/workspaces/zmk-config/Ed1tor50/config"  -DZMK_EXTRA_MODULES="/workspaces/zmk-config/Ed1tor50/;/workspaces/modules/zmk-analog-input-driver/;/workspaces/zmk-modules/zmk-auto-layer/;/workspaces/zmk-modules/zmk-tri-state/"
+west build -b nrfmicro_13 -- -DSHIELD=Ed1tor50 -DZMK_CONFIG="/workspaces/zmk-config/Ed1tor50/config" -DZMK_EXTRA_MODULES="/workspaces/zmk-config/Ed1tor50/;/workspaces/zmk-modules/zmk-analog-input-driver/;/workspaces/zmk-modules/zmk-auto-layer/;/workspaces/zmk-modules/zmk-tri-state/"
